@@ -1,5 +1,5 @@
-PRG            = test
-OBJ            = test.o
+PRG            = uart
+OBJ            = uart.o
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414
@@ -11,7 +11,7 @@ OBJ            = test.o
 #MCU_TARGET     = atmega1280
 #MCU_TARGET     = atmega1281
 #MCU_TARGET     = atmega1284p
-#MCU_TARGET     = atmega16
+MCU_TARGET     = atmega16
 #MCU_TARGET     = atmega163
 #MCU_TARGET     = atmega164p
 #MCU_TARGET     = atmega165
@@ -40,7 +40,7 @@ OBJ            = test.o
 #MCU_TARGET     = atmega8515
 #MCU_TARGET     = atmega8535
 #MCU_TARGET     = atmega88
-MCU_TARGET     = attiny13
+#MCU_TARGET     = attiny13
 #MCU_TARGET     = attiny2313
 #MCU_TARGET     = attiny24
 #MCU_TARGET     = attiny25
@@ -80,7 +80,7 @@ $(PRG).elf: $(OBJ)
 
 
 # dependency:
-demo.o: test.c 
+demo.o: uart.c 
 
 clean:
 	rm -rf *.o $(PRG).elf *.eps *.png *.pdf *.bak 
