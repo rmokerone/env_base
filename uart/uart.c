@@ -12,6 +12,7 @@ void init_uart(unsigned int baud)
     UCSRA = 0X00;
     UCSRB = (1<<RXCIE)|(1<<RXEN)|(1<<TXEN);
     UCSRC = (1 << URSEL)|(1 << UCSZ0)|(1<<UCSZ1);
+    sei ();
 }
 
 int uart_putchar (char c, FILE * stream)

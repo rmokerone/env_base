@@ -2,7 +2,6 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/interrupt.h>
 #include <stdio.h>
 #include "uart.h"
 
@@ -15,7 +14,6 @@ int main(void)
     DDRC = 0xff;
     PORTC = 0X00;
     init_uart (BAUD_SETTING);
-    sei ();
     stdout = &mystdout;
     while(1)
     {
