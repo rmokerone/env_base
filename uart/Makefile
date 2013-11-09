@@ -1,5 +1,5 @@
-PRG            = uart
-OBJ            = uart.o
+PRG            = main
+OBJ            = main.o uart.o
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414
@@ -80,7 +80,7 @@ $(PRG).elf: $(OBJ)
 
 
 # dependency:
-demo.o: uart.c 
+demo.o: uart.c main.c 
 
 clean:
 	rm -rf *.o $(PRG).elf *.eps *.png *.pdf *.bak 
