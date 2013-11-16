@@ -4,7 +4,7 @@
      11.8 DS18B20模块调试成功；
 
 硬件选型：
-MCU：ATMEGA 16
+MCU：ATMEGA 88 
 温度传感器:DS18B20
 无线模块:nRF24L01
 
