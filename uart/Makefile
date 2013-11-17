@@ -11,7 +11,7 @@ OBJ            = main.o uart.o
 #MCU_TARGET     = atmega1280
 #MCU_TARGET     = atmega1281
 #MCU_TARGET     = atmega1284p
-MCU_TARGET     = atmega16
+#MCU_TARGET     = atmega16
 #MCU_TARGET     = atmega163
 #MCU_TARGET     = atmega164p
 #MCU_TARGET     = atmega165
@@ -39,7 +39,7 @@ MCU_TARGET     = atmega16
 #MCU_TARGET     = atmega8
 #MCU_TARGET     = atmega8515
 #MCU_TARGET     = atmega8535
-#MCU_TARGET     = atmega88
+MCU_TARGET     = atmega88
 #MCU_TARGET     = attiny13
 #MCU_TARGET     = attiny2313
 #MCU_TARGET     = attiny24
@@ -59,7 +59,7 @@ LIBS           =
 
 #add it myself
 AVRDUDE = avrdude
-AVRDUDE_FLAGS = -c usbasp 
+AVRDUDE_FLAGS = -c usbasp -F
 
 # You should not have to change anything below here.
 
