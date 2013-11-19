@@ -1,41 +1,23 @@
 //DS18B20模块主程序
-
-#define F_CPU 4E6
-
-#include <avr/io.h>
-#include <util/delay.h>
-
-#define DQ (1<<PIN0)
+#include "ds18b20.h"
 
 unsigned char * p;
 unsigned char id_buff [8];
 unsigned char tmp_buff[9];
-double tmp; //final data;
-
-//DS18B20复位函数 
-char Ds_init (void);
-void Ds_write (unsigned char data);
-unsigned char Ds_read (void);
-void Ds_read_bytes (unsigned char i);
-void Ds_read_id (void);
-void Ds_config (void);
-void Ds_get_tmp (void);
-void Ds_tmp_result (void);
 
 //DS18B20初始函数 正常返回1 错误返回0
 char Ds_init (void)
 {
     char flag;
     char i;
-    DDRA |= DQ;
-    PORTA &= ~(DQ);
+    DDRC |= DQ;
+    PORTC &= ~(DQ);
     _delay_us (480);
-    PORTA |= DQ;
-    //多次取样 减少误判断
+    PORTC |= DQ;    //多次取样 减少误判断
     for (i = 0; i < 240; i++)
     {
     	_delay_us (1);
-     	if ((PINA & DQ) == 0)
+     	if ((PINC & DQ) == 0)
 	{
 	    flag = 1;
 	    break;
@@ -44,7 +26,7 @@ char Ds_init (void)
 	    flag = 0;
     }
     _delay_us (290);
-    PORTA |= DQ;
+    PORTC |= DQ;
     return flag;
 }
 
@@ -54,14 +36,14 @@ void Ds_write (unsigned char data)
     char i;
     for (i = 0; i < 8; i ++)
     {	
-	PORTA &= ~DQ;
+	PORTC &= ~DQ;
 	_delay_us (15);
 	if (data & 0x01)
-	    PORTA |= DQ;
+	    PORTC |= DQ;
 	else
-	    PORTA &= ~DQ;
+	    PORTC &= ~DQ;
 	_delay_us (45);
-	PORTA |= DQ;
+	PORTC |= DQ;
 	data >>= 1;
      }
 }
@@ -69,19 +51,19 @@ void Ds_write (unsigned char data)
 //数据读取函数 先接低位
 unsigned char Ds_read (void)
 {
-    unsigned char data, i;
+    unsigned char data = 0, i;
     for (i = 0; i < 8; i ++)
     {
-	PORTA &= ~DQ;
+	PORTC &= ~DQ;
 	_delay_us (1);
-	PORTA |= DQ;
+	PORTC |= DQ;
 	_delay_us (1);
-	if (PINA & DQ)
+	if (PINC & DQ)
 	    data |= 0x80;
 	_delay_us (45);
 	data >>= 1;
     }
-    PORTA |= DQ;
+    PORTC |= DQ;
     return data;
 }
 
