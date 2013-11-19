@@ -8,6 +8,7 @@
 
 //DS18B20复位函数 
 char Ds_init (void);
+unsigned char CRC (unsigned char bit);
 void Ds_write (unsigned char data);
 unsigned char Ds_read (void);
 void Ds_read_bytes (unsigned char i);
@@ -16,4 +17,4 @@ void Ds_config (void);
 void Ds_get_tmp (void);
 void Ds_tmp_result (void);
 
-float tmp;
+uint16_t tmp;
