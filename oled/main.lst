@@ -1,0 +1,987 @@
+
+main.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000002e  00800100  000007a2  00000836  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000007a2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  0080012e  0080012e  00000864  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000864  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000097  00000000  00000000  00000f30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      0000002f  00000000  00000000  00000fc7  2**0
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000028  00000000  00000000  00000ff6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000771  00000000  00000000  0000101e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000029a  00000000  00000000  0000178f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   000001fd  00000000  00000000  00001a29  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  000000a8  00000000  00000000  00001c28  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    0000017f  00000000  00000000  00001cd0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000001cf  00000000  00000000  00001e4f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000030  00000000  00000000  0000201e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	74 c2       	rjmp	.+1256   	; 0x4ea <__ctors_end>
+   2:	8e c2       	rjmp	.+1308   	; 0x520 <__bad_interrupt>
+   4:	8d c2       	rjmp	.+1306   	; 0x520 <__bad_interrupt>
+   6:	8c c2       	rjmp	.+1304   	; 0x520 <__bad_interrupt>
+   8:	8b c2       	rjmp	.+1302   	; 0x520 <__bad_interrupt>
+   a:	8a c2       	rjmp	.+1300   	; 0x520 <__bad_interrupt>
+   c:	89 c2       	rjmp	.+1298   	; 0x520 <__bad_interrupt>
+   e:	88 c2       	rjmp	.+1296   	; 0x520 <__bad_interrupt>
+  10:	87 c2       	rjmp	.+1294   	; 0x520 <__bad_interrupt>
+  12:	86 c2       	rjmp	.+1292   	; 0x520 <__bad_interrupt>
+  14:	85 c2       	rjmp	.+1290   	; 0x520 <__bad_interrupt>
+  16:	84 c2       	rjmp	.+1288   	; 0x520 <__bad_interrupt>
+  18:	83 c2       	rjmp	.+1286   	; 0x520 <__bad_interrupt>
+  1a:	82 c2       	rjmp	.+1284   	; 0x520 <__bad_interrupt>
+  1c:	81 c2       	rjmp	.+1282   	; 0x520 <__bad_interrupt>
+  1e:	80 c2       	rjmp	.+1280   	; 0x520 <__bad_interrupt>
+  20:	7f c2       	rjmp	.+1278   	; 0x520 <__bad_interrupt>
+  22:	7e c2       	rjmp	.+1276   	; 0x520 <__bad_interrupt>
+  24:	7d c2       	rjmp	.+1274   	; 0x520 <__bad_interrupt>
+  26:	7c c2       	rjmp	.+1272   	; 0x520 <__bad_interrupt>
+  28:	7b c2       	rjmp	.+1270   	; 0x520 <__bad_interrupt>
+  2a:	7a c2       	rjmp	.+1268   	; 0x520 <__bad_interrupt>
+  2c:	79 c2       	rjmp	.+1266   	; 0x520 <__bad_interrupt>
+  2e:	78 c2       	rjmp	.+1264   	; 0x520 <__bad_interrupt>
+  30:	77 c2       	rjmp	.+1262   	; 0x520 <__bad_interrupt>
+  32:	76 c2       	rjmp	.+1260   	; 0x520 <__bad_interrupt>
+
+00000034 <Ascii_1>:
+  34:	00 00 00 00 00 00 00 4f 00 00 00 07 00 07 00 14     .......O........
+  44:	7f 14 7f 14 24 2a 7f 2a 12 23 13 08 64 62 36 49     ....$*.*.#..db6I
+  54:	55 22 50 00 05 03 00 00 00 1c 22 41 00 00 41 22     U"P......."A..A"
+  64:	1c 00 14 08 3e 08 14 08 08 3e 08 08 00 50 30 00     ....>....>...P0.
+  74:	00 08 08 08 08 08 00 60 60 00 00 20 10 08 04 02     .......``.. ....
+  84:	3e 51 49 45 3e 00 42 7f 40 00 42 61 51 49 46 21     >QIE>.B.@.BaQIF!
+  94:	41 45 4b 31 18 14 12 7f 10 27 45 45 45 39 3c 4a     AEK1.....'EEE9<J
+  a4:	49 49 30 01 71 09 05 03 36 49 49 49 36 06 49 49     II0.q...6III6.II
+  b4:	29 1e 00 36 36 00 00 00 56 36 00 00 08 14 22 41     )..66...V6...."A
+  c4:	00 14 14 14 14 14 00 41 22 14 08 02 01 51 09 06     .......A"....Q..
+  d4:	32 49 79 41 3e 7e 11 11 11 7e 7f 49 49 49 36 3e     2IyA>~...~.III6>
+  e4:	41 41 41 22 7f 41 41 22 1c 7f 49 49 49 41 7f 09     AAA".AA"..IIIA..
+  f4:	09 09 01 3e 41 49 49 7a 7f 08 08 08 7f 00 41 7f     ...>AIIz......A.
+ 104:	41 00 20 40 41 3f 01 7f 08 14 22 41 7f 40 40 40     A. @A?...."A.@@@
+ 114:	40 7f 02 0c 02 7f 7f 04 08 10 7f 3e 41 41 41 3e     @..........>AAA>
+ 124:	7f 09 09 09 06 3e 41 51 21 5e 7f 09 19 29 46 46     .....>AQ!^...)FF
+ 134:	49 49 49 31 01 01 7f 01 01 3f 40 40 40 3f 1f 20     III1.....?@@@?. 
+ 144:	40 20 1f 3f 40 38 40 3f 63 14 08 14 63 07 08 70     @ .?@8@?c...c..p
+ 154:	08 07 61 51 49 45 43 00 7f 41 41 00 02 04 08 10     ..aQIEC..AA.....
+ 164:	20 00 41 41 7f 00 04 02 01 02 04 40 40 40 40 40      .AA.......@@@@@
+ 174:	01 02 04 00 00 20 54 54 54 78 7f 48 44 44 38 38     ..... TTTx.HDD88
+ 184:	44 44 44 20 38 44 44 48 7f 38 54 54 54 18 08 7e     DDD 8DDH.8TTT..~
+ 194:	09 01 02 06 49 49 49 3f 7f 08 04 04 78 00 44 7d     ....III?....x.D}
+ 1a4:	40 00 20 40 44 3d 00 7f 10 28 44 00 00 41 7f 40     @. @D=...(D..A.@
+ 1b4:	00 7c 04 18 04 7c 7c 08 04 04 78 38 44 44 44 38     .|...||...x8DDD8
+ 1c4:	7c 14 14 14 08 08 14 14 18 7c 7c 08 04 04 08 48     |........||....H
+ 1d4:	54 54 54 20 04 3f 44 40 20 3c 40 40 20 7c 1c 20     TTT .?D@ <@@ |. 
+ 1e4:	40 20 1c 3c 40 30 40 3c 44 28 10 28 44 0c 50 50     @ .<@0@<D(.(D.PP
+ 1f4:	50 3c 44 64 54 4c 44 00 08 36 41 00 00 00 7f 00     P<DdTLD..6A.....
+ 204:	00 00 41 36 08 00 02 01 02 04 02 3e 55 55 41 22     ..A6.......>UUA"
+ 214:	00 00 00 00 00 00 00 79 00 00 18 24 74 2e 24 48     .......y...$t.$H
+ 224:	7e 49 42 40 5d 22 22 22 5d 15 16 7c 16 15 00 00     ~IB@]"""]..|....
+ 234:	77 00 00 0a 55 55 55 28 00 01 00 01 00 00 0a 0d     w...UUU(........
+ 244:	0a 04 08 14 2a 14 22 04 04 04 04 1c 00 08 08 08     ....*.".........
+ 254:	00 01 01 01 01 01 00 02 05 02 00 44 44 5f 44 44     ...........DD_DD
+ 264:	00 00 04 02 01 7e 20 20 10 3e 06 0f 7f 00 7f 00     .....~  .>......
+ 274:	18 18 00 00 00 40 50 20 00 00 0a 0d 0a 00 22 14     .....@P ......".
+ 284:	2a 14 08 17 08 34 2a 7d 17 08 04 6a 59 30 48 45     *....4*}...jY0HE
+ 294:	40 20 70 29 26 28 70 70 28 26 29 70 70 2a 25 2a     @ p)&(pp(&)pp*%*
+ 2a4:	70 72 29 26 29 70 70 29 24 29 70 70 2a 2d 2a 70     pr)&)pp)$)pp*-*p
+ 2b4:	7e 11 7f 49 49 0e 51 51 71 11 7c 55 56 54 44 7c     ~..II.QQq.|UVTD|
+ 2c4:	55 56 54 44 7c 56 55 56 44 7c 55 54 55 44 00 45     UVTD|VUVD|UTUD.E
+ 2d4:	7e 44 00 00 44 7e 45 00 00 46 7d 46 00 00 45 7c     ~D..D~E..F}F..E|
+ 2e4:	45 00 7f 49 49 41 3e 7c 0a 11 22 7d 38 45 46 44     E..IIA>|.."}8EFD
+ 2f4:	38 38 44 46 45 38 38 46 45 46 38 38 46 45 46 39     88DFE88FEF88FEF9
+ 304:	38 45 44 45 38 22 14 08 14 22 2e 51 49 45 3a 3c     8EDE8"...".QIE:<
+ 314:	41 42 40 3c 3c 40 42 41 3c 3c 42 41 42 3c 3c 41     AB@<<@BA<<BAB<<A
+ 324:	40 41 3c 0c 10 62 11 0c 7f 12 12 12 0c 40 3e 01     @A<..b.......@>.
+ 334:	49 36 20 55 56 54 78 20 54 56 55 78 20 56 55 56     I6 UVTx TVUx VUV
+ 344:	78 20 55 56 55 78 20 55 54 55 78 20 56 57 56 78     x UVUx UTUx VWVx
+ 354:	24 54 78 54 58 0c 52 52 72 13 38 55 56 54 18 38     $TxTX.RRr.8UVT.8
+ 364:	54 56 55 18 38 56 55 56 18 38 55 54 55 18 00 49     TVU.8VUV.8UTU..I
+ 374:	7a 40 00 00 48 7a 41 00 00 4a 79 42 00 00 4a 78     z@..HzA..JyB..Jx
+ 384:	42 00 31 4a 4e 4a 30 7a 11 0a 09 70 30 49 4a 48     B.1JNJ0z...p0IJH
+ 394:	30 30 48 4a 49 30 30 4a 49 4a 30 30 4a 49 4a 31     00HJI00JIJ00JIJ1
+ 3a4:	30 4a 48 4a 30 08 08 2a 08 08 38 64 54 4c 38 38     0JHJ0..*..8dTL88
+ 3b4:	41 42 20 78 38 40 42 21 78 38 42 41 22 78 38 42     AB x8@B!x8BA"x8B
+ 3c4:	40 22 78 0c 50 52 51 3c 7e 14 14 14 08 0c 51 50     @"x.PRQ<~.....QP
+ 3d4:	51 3c 1e 09 09 29 5e 08 15 15 35 4e 38 44 46 45     Q<...)^...5N8DFE
+ 3e4:	20 30 48 4a 49 20 38 45 46 45 20 30 49 4a 49 20      0HJI 8EFE 0IJI 
+ 3f4:	7c 45 46 45 38 20 50 50 7c 03 1f 15 15 35 51 0e     |EFE8 PP|....5Q.
+ 404:	15 15 35 46 7c 55 56 55 44 38 55 56 55 18 00 44     ..5F|UVUD8UVU..D
+ 414:	7c 40 00 7f 48 44 40 40 00 49 7f 44 00 7c 08 12     |@..HD@@.I.D.|..
+ 424:	21 7c 78 10 0a 09 70 7c 09 12 21 7c 78 11 0a 09     !|x...p|..!|x...
+ 434:	70 38 47 44 47 38 30 4b 48 4b 30 3e 41 7f 49 49     p8GDG80KHK0>A.II
+ 444:	38 44 38 54 58 7c 15 16 35 48 78 11 0a 09 10 48     8D8TX|..5Hx....H
+ 454:	54 56 55 20 20 48 56 55 20 48 55 56 55 20 20 49     TVU  HVU HUVU  I
+ 464:	56 55 20 04 05 7e 05 04 08 3c 48 22 01 3c 42 45     VU ..~...<H".<BE
+ 474:	42 3c 38 42 45 22 78 3c 43 40 43 3c 38 43 40 23     B<8BE"x<C@C<8C@#
+ 484:	78 0c 11 60 11 0c 44 66 55 4c 44 48 6a 59 48 00     x..`..DfULDHjYH.
+ 494:	44 64 55 4c 44 48 68 5a 48 00 44 65 56 4d 44 48     DdULDHhZH.DeVMDH
+ 4a4:	69 5a 49 00 00 02 01 02 00 00 01 02 01 00 00 01     iZI.............
+ 4b4:	01 01 00 01 02 02 01 00 00 00 01 00 00 00 02 05     ................
+ 4c4:	02 00 02 01 02 01 00 7f 05 15 3a 50 3e 55 55 41     ..........:P>UUA
+ 4d4:	22 18 14 08 14 0c 44 4a 4a 51 51 51 51 4a 4a 44     ".....DJJQQQQJJD
+ 4e4:	74 42 41 42 74 00                                   tBABt.
+
+000004ea <__ctors_end>:
+ 4ea:	11 24       	eor	r1, r1
+ 4ec:	1f be       	out	0x3f, r1	; 63
+ 4ee:	cf ef       	ldi	r28, 0xFF	; 255
+ 4f0:	d4 e0       	ldi	r29, 0x04	; 4
+ 4f2:	de bf       	out	0x3e, r29	; 62
+ 4f4:	cd bf       	out	0x3d, r28	; 61
+
+000004f6 <__do_copy_data>:
+ 4f6:	11 e0       	ldi	r17, 0x01	; 1
+ 4f8:	a0 e0       	ldi	r26, 0x00	; 0
+ 4fa:	b1 e0       	ldi	r27, 0x01	; 1
+ 4fc:	e2 ea       	ldi	r30, 0xA2	; 162
+ 4fe:	f7 e0       	ldi	r31, 0x07	; 7
+ 500:	02 c0       	rjmp	.+4      	; 0x506 <__stack+0x7>
+ 502:	05 90       	lpm	r0, Z+
+ 504:	0d 92       	st	X+, r0
+ 506:	ae 32       	cpi	r26, 0x2E	; 46
+ 508:	b1 07       	cpc	r27, r17
+ 50a:	d9 f7       	brne	.-10     	; 0x502 <__stack+0x3>
+
+0000050c <__do_clear_bss>:
+ 50c:	21 e0       	ldi	r18, 0x01	; 1
+ 50e:	ae e2       	ldi	r26, 0x2E	; 46
+ 510:	b1 e0       	ldi	r27, 0x01	; 1
+ 512:	01 c0       	rjmp	.+2      	; 0x516 <.do_clear_bss_start>
+
+00000514 <.do_clear_bss_loop>:
+ 514:	1d 92       	st	X+, r1
+
+00000516 <.do_clear_bss_start>:
+ 516:	a0 33       	cpi	r26, 0x30	; 48
+ 518:	b2 07       	cpc	r27, r18
+ 51a:	e1 f7       	brne	.-8      	; 0x514 <.do_clear_bss_loop>
+ 51c:	39 d1       	rcall	.+626    	; 0x790 <main>
+ 51e:	3f c1       	rjmp	.+638    	; 0x79e <_exit>
+
+00000520 <__bad_interrupt>:
+ 520:	6f cd       	rjmp	.-1314   	; 0x0 <__vectors>
+
+00000522 <switchline>:
+        switchline(0);
+}
+
+void switchline(unsigned char line)
+{
+        if(line>=8)line=0;
+ 522:	88 30       	cpi	r24, 0x08	; 8
+ 524:	c8 f4       	brcc	.+50     	; 0x558 <switchline+0x36>
+ 526:	28 2f       	mov	r18, r24
+ 528:	20 55       	subi	r18, 0x50	; 80
+ 52a:	30 e8       	ldi	r19, 0x80	; 128
+ 52c:	83 9f       	mul	r24, r19
+ 52e:	c0 01       	movw	r24, r0
+ 530:	11 24       	eor	r1, r1
+        PORTB&=~(1<<PB1);   //发送命令
+ 532:	29 98       	cbi	0x05, 1	; 5
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 534:	2e bd       	out	0x2e, r18	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 536:	0d b4       	in	r0, 0x2d	; 45
+ 538:	07 fe       	sbrs	r0, 7
+ 53a:	fd cf       	rjmp	.-6      	; 0x536 <switchline+0x14>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 53c:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 53e:	0d b4       	in	r0, 0x2d	; 45
+ 540:	07 fe       	sbrs	r0, 7
+ 542:	fd cf       	rjmp	.-6      	; 0x53e <switchline+0x1c>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 544:	20 e1       	ldi	r18, 0x10	; 16
+ 546:	2e bd       	out	0x2e, r18	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 548:	0d b4       	in	r0, 0x2d	; 45
+ 54a:	07 fe       	sbrs	r0, 7
+ 54c:	fd cf       	rjmp	.-6      	; 0x548 <switchline+0x26>
+        if(line>=8)line=0;
+        PORTB&=~(1<<PB1);   //发送命令
+        SPI_MasterTransmit(0xB0 + line);
+        SPI_MasterTransmit(0x00);
+        SPI_MasterTransmit(0x10);
+        point=(line)*128;
+ 54e:	90 93 2f 01 	sts	0x012F, r25
+ 552:	80 93 2e 01 	sts	0x012E, r24
+ 556:	08 95       	ret
+        switchline(0);
+}
+
+void switchline(unsigned char line)
+{
+        if(line>=8)line=0;
+ 558:	80 e0       	ldi	r24, 0x00	; 0
+ 55a:	90 e0       	ldi	r25, 0x00	; 0
+ 55c:	20 eb       	ldi	r18, 0xB0	; 176
+ 55e:	e9 cf       	rjmp	.-46     	; 0x532 <switchline+0x10>
+
+00000560 <oled_clear>:
+        SPI_MasterTransmit(0x24); */
+        oled_clear();
+}
+
+void oled_clear()
+{
+ 560:	90 eb       	ldi	r25, 0xB0	; 176
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 562:	20 e1       	ldi	r18, 0x10	; 16
+{
+        unsigned char i;
+        unsigned char page;
+        for (page=0; page<8; page++)
+        {
+                PORTB&=~(1<<PB1);   //发送命令
+ 564:	29 98       	cbi	0x05, 1	; 5
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 566:	9e bd       	out	0x2e, r25	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 568:	0d b4       	in	r0, 0x2d	; 45
+ 56a:	07 fe       	sbrs	r0, 7
+ 56c:	fd cf       	rjmp	.-6      	; 0x568 <oled_clear+0x8>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 56e:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 570:	0d b4       	in	r0, 0x2d	; 45
+ 572:	07 fe       	sbrs	r0, 7
+ 574:	fd cf       	rjmp	.-6      	; 0x570 <oled_clear+0x10>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 576:	2e bd       	out	0x2e, r18	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 578:	0d b4       	in	r0, 0x2d	; 45
+ 57a:	07 fe       	sbrs	r0, 7
+ 57c:	fd cf       	rjmp	.-6      	; 0x578 <oled_clear+0x18>
+        {
+                PORTB&=~(1<<PB1);   //发送命令
+                SPI_MasterTransmit(0xB0 + page);
+                SPI_MasterTransmit(0x00);
+                SPI_MasterTransmit(0x10);
+                PORTB|=(1<<PB1);   //发送数据
+ 57e:	29 9a       	sbi	0x05, 1	; 5
+                for (i=0; i<128; i++)
+ 580:	80 e0       	ldi	r24, 0x00	; 0
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 582:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 584:	0d b4       	in	r0, 0x2d	; 45
+ 586:	07 fe       	sbrs	r0, 7
+ 588:	fd cf       	rjmp	.-6      	; 0x584 <oled_clear+0x24>
+                PORTB&=~(1<<PB1);   //发送命令
+                SPI_MasterTransmit(0xB0 + page);
+                SPI_MasterTransmit(0x00);
+                SPI_MasterTransmit(0x10);
+                PORTB|=(1<<PB1);   //发送数据
+                for (i=0; i<128; i++)
+ 58a:	8f 5f       	subi	r24, 0xFF	; 255
+ 58c:	80 38       	cpi	r24, 0x80	; 128
+ 58e:	c9 f7       	brne	.-14     	; 0x582 <oled_clear+0x22>
+ 590:	9f 5f       	subi	r25, 0xFF	; 255
+
+void oled_clear()
+{
+        unsigned char i;
+        unsigned char page;
+        for (page=0; page<8; page++)
+ 592:	98 3b       	cpi	r25, 0xB8	; 184
+ 594:	39 f7       	brne	.-50     	; 0x564 <oled_clear+0x4>
+                SPI_MasterTransmit(0x10);
+                PORTB|=(1<<PB1);   //发送数据
+                for (i=0; i<128; i++)
+                        SPI_MasterTransmit(0);
+        }
+        switchline(0);
+ 596:	80 e0       	ldi	r24, 0x00	; 0
+ 598:	c4 cf       	rjmp	.-120    	; 0x522 <switchline>
+
+0000059a <oled_init>:
+}
+
+void SPI_MasterInit(void)
+{
+        /*设置SS,MOSI和SCK为输出，其他为输入*/
+        DDRB |= (1<<PB3)|(1<<PB5)|(1<<PB2);
+ 59a:	84 b1       	in	r24, 0x04	; 4
+ 59c:	8c 62       	ori	r24, 0x2C	; 44
+ 59e:	84 b9       	out	0x04, r24	; 4
+        //PORTB &= ~(1<<PB2);
+        /* SPI主机，fck/4 .模式0*/
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+ 5a0:	80 e5       	ldi	r24, 0x50	; 80
+ 5a2:	8c bd       	out	0x2c, r24	; 44
+
+void oled_init()
+{
+
+          SPI_MasterInit();
+          DDRB|=(1<<PB0)|(1<<PB1);
+ 5a4:	84 b1       	in	r24, 0x04	; 4
+ 5a6:	83 60       	ori	r24, 0x03	; 3
+ 5a8:	84 b9       	out	0x04, r24	; 4
+          PORTB&=~(1<<PB0);
+ 5aa:	28 98       	cbi	0x05, 0	; 5
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 5ac:	2f e7       	ldi	r18, 0x7F	; 127
+ 5ae:	88 e3       	ldi	r24, 0x38	; 56
+ 5b0:	91 e0       	ldi	r25, 0x01	; 1
+ 5b2:	21 50       	subi	r18, 0x01	; 1
+ 5b4:	80 40       	sbci	r24, 0x00	; 0
+ 5b6:	90 40       	sbci	r25, 0x00	; 0
+ 5b8:	e1 f7       	brne	.-8      	; 0x5b2 <oled_init+0x18>
+ 5ba:	00 c0       	rjmp	.+0      	; 0x5bc <oled_init+0x22>
+ 5bc:	00 00       	nop
+          _delay_ms(50);
+          PORTB|=(1<<PB0);
+ 5be:	28 9a       	sbi	0x05, 0	; 5
+          PORTB&=~(1<<PB1);   //发送命令
+ 5c0:	29 98       	cbi	0x05, 1	; 5
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5c2:	8e ea       	ldi	r24, 0xAE	; 174
+ 5c4:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5c6:	0d b4       	in	r0, 0x2d	; 45
+ 5c8:	07 fe       	sbrs	r0, 7
+ 5ca:	fd cf       	rjmp	.-6      	; 0x5c6 <oled_init+0x2c>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5cc:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5ce:	0d b4       	in	r0, 0x2d	; 45
+ 5d0:	07 fe       	sbrs	r0, 7
+ 5d2:	fd cf       	rjmp	.-6      	; 0x5ce <oled_init+0x34>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5d4:	80 e1       	ldi	r24, 0x10	; 16
+ 5d6:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5d8:	0d b4       	in	r0, 0x2d	; 45
+ 5da:	07 fe       	sbrs	r0, 7
+ 5dc:	fd cf       	rjmp	.-6      	; 0x5d8 <oled_init+0x3e>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5de:	80 e4       	ldi	r24, 0x40	; 64
+ 5e0:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5e2:	0d b4       	in	r0, 0x2d	; 45
+ 5e4:	07 fe       	sbrs	r0, 7
+ 5e6:	fd cf       	rjmp	.-6      	; 0x5e2 <oled_init+0x48>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5e8:	81 e8       	ldi	r24, 0x81	; 129
+ 5ea:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5ec:	0d b4       	in	r0, 0x2d	; 45
+ 5ee:	07 fe       	sbrs	r0, 7
+ 5f0:	fd cf       	rjmp	.-6      	; 0x5ec <oled_init+0x52>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5f2:	8f ec       	ldi	r24, 0xCF	; 207
+ 5f4:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 5f6:	0d b4       	in	r0, 0x2d	; 45
+ 5f8:	07 fe       	sbrs	r0, 7
+ 5fa:	fd cf       	rjmp	.-6      	; 0x5f6 <oled_init+0x5c>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 5fc:	81 ea       	ldi	r24, 0xA1	; 161
+ 5fe:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 600:	0d b4       	in	r0, 0x2d	; 45
+ 602:	07 fe       	sbrs	r0, 7
+ 604:	fd cf       	rjmp	.-6      	; 0x600 <oled_init+0x66>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 606:	88 ec       	ldi	r24, 0xC8	; 200
+ 608:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 60a:	0d b4       	in	r0, 0x2d	; 45
+ 60c:	07 fe       	sbrs	r0, 7
+ 60e:	fd cf       	rjmp	.-6      	; 0x60a <oled_init+0x70>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 610:	86 ea       	ldi	r24, 0xA6	; 166
+ 612:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 614:	0d b4       	in	r0, 0x2d	; 45
+ 616:	07 fe       	sbrs	r0, 7
+ 618:	fd cf       	rjmp	.-6      	; 0x614 <oled_init+0x7a>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 61a:	88 ea       	ldi	r24, 0xA8	; 168
+ 61c:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 61e:	0d b4       	in	r0, 0x2d	; 45
+ 620:	07 fe       	sbrs	r0, 7
+ 622:	fd cf       	rjmp	.-6      	; 0x61e <oled_init+0x84>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 624:	8f e3       	ldi	r24, 0x3F	; 63
+ 626:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 628:	0d b4       	in	r0, 0x2d	; 45
+ 62a:	07 fe       	sbrs	r0, 7
+ 62c:	fd cf       	rjmp	.-6      	; 0x628 <oled_init+0x8e>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 62e:	83 ed       	ldi	r24, 0xD3	; 211
+ 630:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 632:	0d b4       	in	r0, 0x2d	; 45
+ 634:	07 fe       	sbrs	r0, 7
+ 636:	fd cf       	rjmp	.-6      	; 0x632 <oled_init+0x98>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 638:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 63a:	0d b4       	in	r0, 0x2d	; 45
+ 63c:	07 fe       	sbrs	r0, 7
+ 63e:	fd cf       	rjmp	.-6      	; 0x63a <oled_init+0xa0>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 640:	85 ed       	ldi	r24, 0xD5	; 213
+ 642:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 644:	0d b4       	in	r0, 0x2d	; 45
+ 646:	07 fe       	sbrs	r0, 7
+ 648:	fd cf       	rjmp	.-6      	; 0x644 <oled_init+0xaa>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 64a:	80 e8       	ldi	r24, 0x80	; 128
+ 64c:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 64e:	0d b4       	in	r0, 0x2d	; 45
+ 650:	07 fe       	sbrs	r0, 7
+ 652:	fd cf       	rjmp	.-6      	; 0x64e <oled_init+0xb4>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 654:	89 ed       	ldi	r24, 0xD9	; 217
+ 656:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 658:	0d b4       	in	r0, 0x2d	; 45
+ 65a:	07 fe       	sbrs	r0, 7
+ 65c:	fd cf       	rjmp	.-6      	; 0x658 <oled_init+0xbe>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 65e:	81 ef       	ldi	r24, 0xF1	; 241
+ 660:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 662:	0d b4       	in	r0, 0x2d	; 45
+ 664:	07 fe       	sbrs	r0, 7
+ 666:	fd cf       	rjmp	.-6      	; 0x662 <oled_init+0xc8>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 668:	8a ed       	ldi	r24, 0xDA	; 218
+ 66a:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 66c:	0d b4       	in	r0, 0x2d	; 45
+ 66e:	07 fe       	sbrs	r0, 7
+ 670:	fd cf       	rjmp	.-6      	; 0x66c <oled_init+0xd2>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 672:	82 e1       	ldi	r24, 0x12	; 18
+ 674:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 676:	0d b4       	in	r0, 0x2d	; 45
+ 678:	07 fe       	sbrs	r0, 7
+ 67a:	fd cf       	rjmp	.-6      	; 0x676 <oled_init+0xdc>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 67c:	8b ed       	ldi	r24, 0xDB	; 219
+ 67e:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 680:	0d b4       	in	r0, 0x2d	; 45
+ 682:	07 fe       	sbrs	r0, 7
+ 684:	fd cf       	rjmp	.-6      	; 0x680 <oled_init+0xe6>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 686:	80 e4       	ldi	r24, 0x40	; 64
+ 688:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 68a:	0d b4       	in	r0, 0x2d	; 45
+ 68c:	07 fe       	sbrs	r0, 7
+ 68e:	fd cf       	rjmp	.-6      	; 0x68a <oled_init+0xf0>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 690:	80 e2       	ldi	r24, 0x20	; 32
+ 692:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 694:	0d b4       	in	r0, 0x2d	; 45
+ 696:	07 fe       	sbrs	r0, 7
+ 698:	fd cf       	rjmp	.-6      	; 0x694 <oled_init+0xfa>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 69a:	82 e0       	ldi	r24, 0x02	; 2
+ 69c:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 69e:	0d b4       	in	r0, 0x2d	; 45
+ 6a0:	07 fe       	sbrs	r0, 7
+ 6a2:	fd cf       	rjmp	.-6      	; 0x69e <oled_init+0x104>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 6a4:	8d e8       	ldi	r24, 0x8D	; 141
+ 6a6:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 6a8:	0d b4       	in	r0, 0x2d	; 45
+ 6aa:	07 fe       	sbrs	r0, 7
+ 6ac:	fd cf       	rjmp	.-6      	; 0x6a8 <oled_init+0x10e>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 6ae:	84 e1       	ldi	r24, 0x14	; 20
+ 6b0:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 6b2:	0d b4       	in	r0, 0x2d	; 45
+ 6b4:	07 fe       	sbrs	r0, 7
+ 6b6:	fd cf       	rjmp	.-6      	; 0x6b2 <oled_init+0x118>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 6b8:	84 ea       	ldi	r24, 0xA4	; 164
+ 6ba:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 6bc:	0d b4       	in	r0, 0x2d	; 45
+ 6be:	07 fe       	sbrs	r0, 7
+ 6c0:	fd cf       	rjmp	.-6      	; 0x6bc <oled_init+0x122>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 6c2:	86 ea       	ldi	r24, 0xA6	; 166
+ 6c4:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 6c6:	0d b4       	in	r0, 0x2d	; 45
+ 6c8:	07 fe       	sbrs	r0, 7
+ 6ca:	fd cf       	rjmp	.-6      	; 0x6c6 <oled_init+0x12c>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 6cc:	8f ea       	ldi	r24, 0xAF	; 175
+ 6ce:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 6d0:	0d b4       	in	r0, 0x2d	; 45
+ 6d2:	07 fe       	sbrs	r0, 7
+ 6d4:	fd cf       	rjmp	.-6      	; 0x6d0 <oled_init+0x136>
+        SPI_MasterTransmit(0xC8);
+        SPI_MasterTransmit(0x2F);
+        SPI_MasterTransmit(0x24);
+        SPI_MasterTransmit(0x81);
+        SPI_MasterTransmit(0x24); */
+        oled_clear();
+ 6d6:	44 cf       	rjmp	.-376    	; 0x560 <oled_clear>
+
+000006d8 <OLED_Display>:
+        point=(line)*128;
+
+}
+
+void OLED_Display(char display)
+{
+ 6d8:	cf 93       	push	r28
+ 6da:	c8 2f       	mov	r28, r24
+        unsigned char count;
+        if(point%128>=125)
+ 6dc:	60 91 2e 01 	lds	r22, 0x012E
+ 6e0:	70 91 2f 01 	lds	r23, 0x012F
+ 6e4:	9b 01       	movw	r18, r22
+ 6e6:	2f 77       	andi	r18, 0x7F	; 127
+ 6e8:	33 27       	eor	r19, r19
+ 6ea:	2d 37       	cpi	r18, 0x7D	; 125
+ 6ec:	31 05       	cpc	r19, r1
+ 6ee:	50 f5       	brcc	.+84     	; 0x744 <OLED_Display+0x6c>
+                switchline(point/128+1);
+        display-=32;
+ 6f0:	c0 52       	subi	r28, 0x20	; 32
+        PORTB|=(1<<PB1);   //发送数据
+ 6f2:	29 9a       	sbi	0x05, 1	; 5
+ 6f4:	8c 2f       	mov	r24, r28
+ 6f6:	99 27       	eor	r25, r25
+ 6f8:	87 fd       	sbrc	r24, 7
+ 6fa:	90 95       	com	r25
+ 6fc:	20 e0       	ldi	r18, 0x00	; 0
+ 6fe:	30 e0       	ldi	r19, 0x00	; 0
+ 700:	ac 01       	movw	r20, r24
+ 702:	44 0f       	add	r20, r20
+ 704:	55 1f       	adc	r21, r21
+ 706:	44 0f       	add	r20, r20
+ 708:	55 1f       	adc	r21, r21
+        for(count=0;count<5;count++)
+                SPI_MasterTransmit(pgm_read_byte(Ascii_1[display]+count));
+ 70a:	48 0f       	add	r20, r24
+ 70c:	59 1f       	adc	r21, r25
+ 70e:	4c 5c       	subi	r20, 0xCC	; 204
+ 710:	5f 4f       	sbci	r21, 0xFF	; 255
+ 712:	fa 01       	movw	r30, r20
+ 714:	e2 0f       	add	r30, r18
+ 716:	f3 1f       	adc	r31, r19
+ 718:	e4 91       	lpm	r30, Z
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 71a:	ee bd       	out	0x2e, r30	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 71c:	0d b4       	in	r0, 0x2d	; 45
+ 71e:	07 fe       	sbrs	r0, 7
+ 720:	fd cf       	rjmp	.-6      	; 0x71c <OLED_Display+0x44>
+ 722:	2f 5f       	subi	r18, 0xFF	; 255
+ 724:	3f 4f       	sbci	r19, 0xFF	; 255
+        unsigned char count;
+        if(point%128>=125)
+                switchline(point/128+1);
+        display-=32;
+        PORTB|=(1<<PB1);   //发送数据
+        for(count=0;count<5;count++)
+ 726:	25 30       	cpi	r18, 0x05	; 5
+ 728:	31 05       	cpc	r19, r1
+ 72a:	99 f7       	brne	.-26     	; 0x712 <OLED_Display+0x3a>
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 72c:	1e bc       	out	0x2e, r1	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 72e:	0d b4       	in	r0, 0x2d	; 45
+ 730:	07 fe       	sbrs	r0, 7
+ 732:	fd cf       	rjmp	.-6      	; 0x72e <OLED_Display+0x56>
+        display-=32;
+        PORTB|=(1<<PB1);   //发送数据
+        for(count=0;count<5;count++)
+                SPI_MasterTransmit(pgm_read_byte(Ascii_1[display]+count));
+        SPI_MasterTransmit(0);
+        point+=6;
+ 734:	6a 5f       	subi	r22, 0xFA	; 250
+ 736:	7f 4f       	sbci	r23, 0xFF	; 255
+ 738:	70 93 2f 01 	sts	0x012F, r23
+ 73c:	60 93 2e 01 	sts	0x012E, r22
+}
+ 740:	cf 91       	pop	r28
+ 742:	08 95       	ret
+
+void OLED_Display(char display)
+{
+        unsigned char count;
+        if(point%128>=125)
+                switchline(point/128+1);
+ 744:	cb 01       	movw	r24, r22
+ 746:	88 0f       	add	r24, r24
+ 748:	89 2f       	mov	r24, r25
+ 74a:	88 1f       	adc	r24, r24
+ 74c:	99 0b       	sbc	r25, r25
+ 74e:	91 95       	neg	r25
+ 750:	8f 5f       	subi	r24, 0xFF	; 255
+ 752:	e7 de       	rcall	.-562    	; 0x522 <switchline>
+ 754:	60 91 2e 01 	lds	r22, 0x012E
+ 758:	70 91 2f 01 	lds	r23, 0x012F
+ 75c:	c9 cf       	rjmp	.-110    	; 0x6f0 <OLED_Display+0x18>
+
+0000075e <writestring>:
+        SPI_MasterTransmit(0);
+        point+=6;
+}
+
+void writestring(char word[])
+{
+ 75e:	cf 93       	push	r28
+ 760:	df 93       	push	r29
+ 762:	ec 01       	movw	r28, r24
+        int count=0;
+        while(word[count]!='\0')
+ 764:	88 81       	ld	r24, Y
+ 766:	88 23       	and	r24, r24
+ 768:	29 f0       	breq	.+10     	; 0x774 <writestring+0x16>
+                SPI_MasterTransmit(pgm_read_byte(Ascii_1[display]+count));
+        SPI_MasterTransmit(0);
+        point+=6;
+}
+
+void writestring(char word[])
+ 76a:	21 96       	adiw	r28, 0x01	; 1
+{
+        int count=0;
+        while(word[count]!='\0')
+                OLED_Display(word[count++]);
+ 76c:	b5 df       	rcall	.-150    	; 0x6d8 <OLED_Display>
+}
+
+void writestring(char word[])
+{
+        int count=0;
+        while(word[count]!='\0')
+ 76e:	89 91       	ld	r24, Y+
+ 770:	81 11       	cpse	r24, r1
+ 772:	fc cf       	rjmp	.-8      	; 0x76c <writestring+0xe>
+                OLED_Display(word[count++]);
+}
+ 774:	df 91       	pop	r29
+ 776:	cf 91       	pop	r28
+ 778:	08 95       	ret
+
+0000077a <SPI_MasterInit>:
+
+void SPI_MasterInit(void)
+{
+        /*设置SS,MOSI和SCK为输出，其他为输入*/
+        DDRB |= (1<<PB3)|(1<<PB5)|(1<<PB2);
+ 77a:	84 b1       	in	r24, 0x04	; 4
+ 77c:	8c 62       	ori	r24, 0x2C	; 44
+ 77e:	84 b9       	out	0x04, r24	; 4
+        //PORTB &= ~(1<<PB2);
+        /* SPI主机，fck/4 .模式0*/
+        SPCR = (1<<SPE)|(1<<MSTR)|(0<<SPR0)|(0<<SPR1)|(0<<CPOL)|(0<<CPHA);
+ 780:	80 e5       	ldi	r24, 0x50	; 80
+ 782:	8c bd       	out	0x2c, r24	; 44
+ 784:	08 95       	ret
+
+00000786 <SPI_MasterTransmit>:
+}
+void SPI_MasterTransmit(char cData)
+{
+        /* 启动数据传输*/
+        SPDR = cData;
+ 786:	8e bd       	out	0x2e, r24	; 46
+        /* 等待传输结束*/
+        while(!(SPSR & (1<<SPIF)))
+ 788:	0d b4       	in	r0, 0x2d	; 45
+ 78a:	07 fe       	sbrs	r0, 7
+ 78c:	fd cf       	rjmp	.-6      	; 0x788 <SPI_MasterTransmit+0x2>
+        ;
+}
+ 78e:	08 95       	ret
+
+00000790 <main>:
+void switchline(unsigned char line);
+
+
+int main(void)
+{
+        oled_init();
+ 790:	04 df       	rcall	.-504    	; 0x59a <oled_init>
+        //OLED_Display('G');
+        switchline(0);
+ 792:	80 e0       	ldi	r24, 0x00	; 0
+ 794:	c6 de       	rcall	.-628    	; 0x522 <switchline>
+        //writestring("Hello,World!");
+        writestring("The Advanced Encryption Standard is a bad ppp");
+ 796:	80 e0       	ldi	r24, 0x00	; 0
+ 798:	91 e0       	ldi	r25, 0x01	; 1
+ 79a:	e1 df       	rcall	.-62     	; 0x75e <writestring>
+ 79c:	ff cf       	rjmp	.-2      	; 0x79c <main+0xc>
+
+0000079e <_exit>:
+ 79e:	f8 94       	cli
+
+000007a0 <__stop_program>:
+ 7a0:	ff cf       	rjmp	.-2      	; 0x7a0 <__stop_program>
