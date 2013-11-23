@@ -90,7 +90,7 @@ uchar flag;
 *****************************************************************/
 //void NRF24L01_SPI_Init(BYTE Mode);     // Init HW or SW SPI
 
-void NRF24L01_SPI_Init();  // init spi
+void SPI_Init();  // init spi
   uchar SPI_RW(BYTE byte);                                // Single SPI read/write
   uchar SPI_Read(BYTE reg);                               // Read one byte from nRF24L01
   uchar SPI_RW_Reg(BYTE reg, BYTE byte);                  // Write one byte to register 'reg'

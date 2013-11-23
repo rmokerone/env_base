@@ -11,7 +11,7 @@ void init_nrf24l01_io(void)
 	CLEARBIT(PORTB,SCK);
 }
 
-void NRF24L01_SPI_Init(void)     // Init SPI 
+void SPI_Init(void)     // Init SPI 
 {
 	DDRB |= (1<<SCK) | (1<<MOSI) | (1<<CSN) | (1<<CE);
 	SPCR |= (1<<SPE) | (1<<MSTR);

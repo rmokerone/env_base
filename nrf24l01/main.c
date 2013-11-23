@@ -3,7 +3,6 @@
 #define F_CPU 8E6
 #include <avr/io.h>
 #include <stdio.h>
-#include <avr/interrupt.h>
 #include <util/delay.h>
 #include "uart.h"
 #include "nRF24L01.h"
@@ -15,7 +14,7 @@ int main (void)
 	unsigned char i = 0,bit;
 	init_uart (BAUD_SETTING);
 	stdout = &mystdout;
-	NRF24L01_SPI_Init ();
+	SPI_Init ();
 	for (i = 0; i < 32; i++)
 	{
 		tx_buf[i] = 0xff;
