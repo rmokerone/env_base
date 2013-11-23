@@ -6,6 +6,9 @@
 
 #define uchar unsigned char
 
+#define RX 1
+#define TX 0
+
 //快捷方式设置寄存器
 #define BIT(x) (1 << (x))
 #define SETBITS(x,y) ((x) |= (y))
@@ -93,11 +96,16 @@ void NRF24L01_SPI_Init();  // init spi
   uchar SPI_RW_Reg(BYTE reg, BYTE byte);                  // Write one byte to register 'reg'
   uchar SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);  // Writes multiply bytes to one register
   uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);   // Read multiply bytes from one register
-  void power_off (void); 
-  void init_nrf24l01_io(void);
-  void ifnnrf_rx_mode(void);
-  void ifnnrf_tx_mode(void);
-  void ifnnrf_CLERN_ALL();
+void power_off (void); 
+void init_nrf24l01_io(void);
+void ifnnrf_rx_mode(void);
+void ifnnrf_tx_mode(void);
+void ifnnrf_CLERN_ALL();
+//封装好的发送函数
+uchar nrf_tx (void);
+//封装好的接收函数
+uchar nrf_rx (void);
+
 
 //定义各个引脚的端口号
 #define CE      PB1

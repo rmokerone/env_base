@@ -1,4 +1,5 @@
 /*uart.h*/
+#include <stdio.h>
 #define BAUD 9600
 
 #define CRYSTAL 8000000
@@ -12,4 +13,3 @@ int uart_putchar (char c, FILE * stream);
 //unsigned char uart_rcvchar (void);
 //定义UART接收到的数据类型为volatile (类型限定词）
 volatile unsigned char uart_data;
-

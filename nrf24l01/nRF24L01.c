@@ -196,3 +196,46 @@ void ifnnrf_CLERN_ALL()
   SPI_RW_Reg(WRITE_REG+STATUS,0xff);
 }
 
+//封装好的接收函数,成功返回1，失败返回0
+uchar nrf_rx (void)
+{
+	uchar rx_sta,bit;
+	ifnnrf_rx_mode ();
+	_delay_us (400);
+	rx_sta = SPI_Read (STATUS);
+	SPI_RW_Reg (WRITE_REG+STATUS,0XFF);	
+	if (rx_sta&STA_MARK_RX)
+	{
+		SPI_Read_Buf(RD_RX_PLOAD,rx_buf,TX_PLOAD_WIDTH);
+		bit = 1;
+	}
+	else
+	{
+		bit = 0;
+	}
+	ifnnrf_CLERN_ALL();
+	return bit;
+//	printf ("the status reg is 0x%x\n",rx_sta);
+}
+
+//封装好的发送函数，成功返回1，失败返回0
+uchar nrf_tx (void)
+{
+	uchar tx_sta,bit;
+	ifnnrf_tx_mode ();
+	while (PIND & (1<<IRQ));
+	tx_sta = SPI_Read (STATUS);
+	SPI_RW_Reg (WRITE_REG+STATUS,0Xff);
+	if (tx_sta&STA_MARK_TX)
+	{
+		ifnnrf_CLERN_ALL ();
+		bit = 1;
+	}
+	else 
+	{
+		ifnnrf_CLERN_ALL ();
+		bit = 0;
+	}
+	return bit;
+//	printf ("the status reg is 0x%x\n",tx_sta);
+}
