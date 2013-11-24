@@ -1,5 +1,5 @@
 PRG            = main
-OBJ            = main.o
+OBJ            = main.o oled.o
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414
