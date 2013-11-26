@@ -5,28 +5,31 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 AVRDUDE	Makefile	/^AVRDUDE = avrdude$/;"	m
-AVRDUDE_FLAGS	Makefile	/^AVRDUDE_FLAGS = -c usbasp $/;"	m
-Ascii_1	main.c	/^ const unsigned char PROGMEM Ascii_1[][5]={		\/\/ Refer to "Times New Roman" Font Database...$/;"	v
+AVRDUDE_FLAGS	Makefile	/^AVRDUDE_FLAGS = -c usbasp -F$/;"	m
+Ascii_1	oled.c	/^const unsigned char PROGMEM Ascii_1[][5]={                \/\/ Refer to "Times New Roman" Font Database...$/;"	v
 CC	Makefile	/^CC             = avr-gcc$/;"	m
+DC	oled.h	29;"	d
 DEFS	Makefile	/^DEFS           =$/;"	m
 DFLAGS	Makefile	/^override LDFLAGS       = -Wl,-Map,$(PRG).map$/;"	m
 EXTRA_CLEAN_FILES	Makefile	/^EXTRA_CLEAN_FILES       = *.hex *.bin *.srec$/;"	m
 FIG2DEV	Makefile	/^FIG2DEV                 = fig2dev$/;"	m
 FLAGS	Makefile	/^override CFLAGS        = -g -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) $(DEFS)$/;"	m
-F_CPU	main.c	14;"	d	file:
+F_CPU	oled.h	12;"	d
 LIBS	Makefile	/^LIBS           =$/;"	m
-MCU_TARGET	Makefile	/^MCU_TARGET     = atmega16$/;"	m
-OBJ	Makefile	/^OBJ            = main.o$/;"	m
+MCU_TARGET	Makefile	/^MCU_TARGET     = atmega88$/;"	m
+OBJ	Makefile	/^OBJ            = main.o oled.o$/;"	m
 OBJCOPY	Makefile	/^OBJCOPY        = avr-objcopy$/;"	m
 OBJDUMP	Makefile	/^OBJDUMP        = avr-objdump$/;"	m
-OLED_Display	main.c	/^void OLED_Display(char display)$/;"	f
+OLED_CS	oled.h	30;"	d
+OLED_Display	oled.c	/^void OLED_Display(char display)$/;"	f
 OPTIMIZE	Makefile	/^OPTIMIZE       = -O2$/;"	m
 PRG	Makefile	/^PRG            = main$/;"	m
-SPI_MasterInit	main.c	/^void SPI_MasterInit(void)$/;"	f
-SPI_MasterTransmit	main.c	/^void SPI_MasterTransmit(char cData)$/;"	f
+RST	oled.h	28;"	d
+SPI_MasterInit	oled.c	/^void SPI_MasterInit(void)$/;"	f
+SPI_MasterTransmit	oled.c	/^void SPI_MasterTransmit(char cData)$/;"	f
 main	main.c	/^int main(void)$/;"	f
-oled_clear	main.c	/^void oled_clear()$/;"	f
-oled_init	main.c	/^void oled_init()$/;"	f
-point	main.c	/^unsigned int point;$/;"	v
-switchline	main.c	/^void switchline(unsigned char line)$/;"	f
-writestring	main.c	/^void writestring(char word[])$/;"	f
+oled_clear	oled.c	/^void oled_clear()$/;"	f
+oled_init	oled.c	/^void oled_init()$/;"	f
+point	oled.h	/^unsigned int point;$/;"	v
+switchline	oled.c	/^void switchline(unsigned char line)$/;"	f
+writestring	oled.c	/^void writestring(char word[])$/;"	f

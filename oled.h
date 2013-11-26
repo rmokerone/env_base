@@ -9,7 +9,7 @@
 //M8£¬PB0-RST,PB1-D/C
 
 
-# define F_CPU 8E6 
+# define F_CPU 8E6
 #include <avr/io.h>
 #include <util/delay.h>
 #include  <avr/pgmspace.h>
@@ -24,7 +24,10 @@ void oled_clear();
 void writestring(char word[]);
 void switchpoint(unsigned char x,unsigned char y);
 void switchline(unsigned char line);
-
+void oled_set_pos (unsigned char x, unsigned char y);
+void OLED_Display(char display);
+void OLED_Display_32(unsigned char x, unsigned char y, char num);
+void OLED_Display_tmpchar (unsigned char x, unsigned char y);
 #define RST PD4
 #define DC  PD5
-#define OLED_CS PD6
+#define OLED_CS  PD6

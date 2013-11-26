@@ -24,6 +24,10 @@ void oled_clear();
 void writestring(char word[]);
 void switchpoint(unsigned char x,unsigned char y);
 void switchline(unsigned char line);
-
+void oled_set_pos (unsigned char x, unsigned char y);
+void OLED_Display(char display);
+void OLED_Display_32(unsigned char x, unsigned char y, char num);
+void OLED_Display_tmpchar (unsigned char x, unsigned char y);
 #define RST PD4
 #define DC  PD5
+#define OLED_CS  PD6

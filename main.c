@@ -11,9 +11,11 @@ static FILE mystdout = FDEV_SETUP_STREAM (uart_putchar, NULL, _FDEV_SETUP_WRITE)
 
 uchar table[10]= {'0','1','2','3','4','5','6','7','8','9'};
 
+void show_tmp(int tmp);
+
 int main (void)
 {
-     flag = TX;
+     flag = RX;
      uint16_t tmp_show;
      uchar times=0;
      init_uart(BAUD_SETTING);
@@ -46,14 +48,8 @@ int main (void)
 	    PORTD &= ~(1<<PD6);
 	    switchline (2);
 	    writestring ("The Temperature is :");
-	    switchline (3);
-	    OLED_Display(table[tmp_show/1000]);
-	    OLED_Display(table[tmp_show%1000/100]);
-	    OLED_Display('.');
-	    OLED_Display(table[tmp_show%100/10]);
-	    OLED_Display(table[tmp_show%10]);
-	    OLED_Display('C');
-	    PORTD |= (1<<PD6);
+	    show_tmp(tmp_show);
+    	    PORTD |= (1<<PD6);
 	  
 	    printf ("the rcv data is %d\n", tmp_show);
 	}
@@ -69,4 +65,14 @@ int main (void)
 	
      }
      return 0;
+}
+
+void show_tmp (int tmp)
+{
+    	OLED_Display_32(0,3,tmp/1000);
+	OLED_Display_32(16,3,tmp%1000/100);
+	OLED_Display_32(32,3,10);
+	OLED_Display_32(48,3,tmp%100/10);
+	OLED_Display_32(64,3,tmp%10);
+	OLED_Display_tmpchar(80,3);
 }
