@@ -6,12 +6,27 @@
 #include <util/delay.h>
 #include "uart.h"
 #include "nRF24L01.h"
+
+uchar TX_ADDRESS[TX_ADR_WIDTH] = {0X34,0X43,0X10,0X10,0X01};
+
 static FILE mystdout = FDEV_SETUP_STREAM (uart_putchar, NULL, _FDEV_SETUP_WRITE);
+
+unsigned char TX_AP0[TX_ADR_WIDTH] =  {0X34,0X43,0X10,0X10,0X02};
 
 int main (void)
 {
-	flag = RX;	
+	unsigned char AP;	
 	unsigned char i = 0,bit;
+	flag = RX;
+	AP = 0;
+//若为第一个节点则AP = 0，第二个节点AP = 1
+	if (AP == 1)
+	{
+		for (i = 0; i< TX_ADR_WIDTH; i++)
+		{
+			TX_ADDRESS[i] = TX_AP0[i];
+		}
+	}
 	init_uart (BAUD_SETTING);
 	stdout = &mystdout;
 	SPI_Init ();
@@ -23,7 +38,7 @@ int main (void)
 	{
 		if (flag==RX)
 		{
-			bit = nrf_rx ();
+			bit = nrf_rx (TX_ADDRESS);
 			if (bit)
 			{
 				printf ("the data are: \n");
@@ -41,7 +56,7 @@ int main (void)
 		}
 		else
 		{
-			nrf_tx ();
+			nrf_tx (TX_ADDRESS);
 		}
 		_delay_ms (1000);
 	}

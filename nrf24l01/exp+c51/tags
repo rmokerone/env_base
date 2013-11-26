@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BYTE	NRF_24L01.H	/^typedef unsigned char BYTE;$/;"	t
+CD	NRF_24L01.H	33;"	d
+CE	NRF_24L01.H	/^  sbit CE =  P1^0;$/;"	v
+CONFIG	NRF_24L01.H	24;"	d
+CSN	NRF_24L01.H	/^  sbit CSN=  P1^4;$/;"	v
+EN_AA	NRF_24L01.H	25;"	d
+EN_RXADDR	NRF_24L01.H	26;"	d
+FIFO_STATUS	NRF_24L01.H	47;"	d
+FLUSH_RX	NRF_24L01.H	18;"	d
+FLUSH_TX	NRF_24L01.H	17;"	d
+IRQ	NRF_24L01.H	/^  sbit IRQ = P1^1;$/;"	v
+KEY	NRF_24L01.C	45;"	d	file:
+KEY	config.h	/^sbit KEY = P1^2;$/;"	v
+MAX_RT	NRF_24L01.C	/^sbit	MAX_RT	=sta^4;$/;"	v
+MISO	NRF_24L01.H	/^  sbit MISO= P1^7;$/;"	v
+MOSI	NRF_24L01.H	/^  sbit MOSI= P1^6;$/;"	v
+NOP	NRF_24L01.H	20;"	d
+OBSERVE_TX	NRF_24L01.H	32;"	d
+RD_RX_PLOAD	NRF_24L01.H	15;"	d
+READ_REG	NRF_24L01.H	13;"	d
+REUSE_TX_PL	NRF_24L01.H	19;"	d
+RF_CH	NRF_24L01.H	29;"	d
+RF_SETUP	NRF_24L01.H	30;"	d
+RX_ADDR_P0	NRF_24L01.H	34;"	d
+RX_ADDR_P1	NRF_24L01.H	35;"	d
+RX_ADDR_P2	NRF_24L01.H	36;"	d
+RX_ADDR_P3	NRF_24L01.H	37;"	d
+RX_ADDR_P4	NRF_24L01.H	38;"	d
+RX_ADDR_P5	NRF_24L01.H	39;"	d
+RX_DR	NRF_24L01.C	/^sbit	RX_DR	=sta^6;$/;"	v
+RX_PW_P0	NRF_24L01.H	41;"	d
+RX_PW_P1	NRF_24L01.H	42;"	d
+RX_PW_P2	NRF_24L01.H	43;"	d
+RX_PW_P3	NRF_24L01.H	44;"	d
+RX_PW_P4	NRF_24L01.H	45;"	d
+RX_PW_P5	NRF_24L01.H	46;"	d
+SCK	NRF_24L01.H	/^  sbit SCK=  P1^5;$/;"	v
+SETUP_AW	NRF_24L01.H	27;"	d
+SETUP_RETR	NRF_24L01.H	28;"	d
+SPI_CLR_Reg	NRF_24L01.C	/^void SPI_CLR_Reg(BYTE R_T)$/;"	f
+SPI_RW	NRF_24L01.C	/^uchar SPI_RW(uchar byte)$/;"	f
+SPI_RW_Reg	NRF_24L01.C	/^uchar SPI_RW_Reg(BYTE reg, BYTE value)$/;"	f
+SPI_Read	NRF_24L01.C	/^BYTE SPI_Read(BYTE reg)$/;"	f
+SPI_Read_Buf	NRF_24L01.C	/^uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+SPI_Write_Buf	NRF_24L01.C	/^uchar SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+STATUS	NRF_24L01.H	31;"	d
+STA_MARK_MX	NRF_24L01.H	50;"	d
+STA_MARK_RX	NRF_24L01.H	48;"	d
+STA_MARK_TX	NRF_24L01.H	49;"	d
+TX_ADDR	NRF_24L01.H	40;"	d
+TX_ADDRESS	NRF_24L01.C	/^uchar const TX_ADDRESS[TX_ADR_WIDTH]  = {0x34,0x43,0x10,0x10,0x01}; \/\/ Define a static TX address$/;"	v
+TX_ADR_WIDTH	NRF_24L01.H	8;"	d
+TX_DS	NRF_24L01.C	/^sbit	TX_DS	=sta^5;$/;"	v
+TX_PLOAD_WIDTH	NRF_24L01.H	10;"	d
+TxData	UART.C	/^void TxData (unsigned char JK)$/;"	f
+WRITE_REG	NRF_24L01.H	14;"	d
+WR_TX_PLOAD	NRF_24L01.H	16;"	d
+Wait	UART.C	/^void Wait(unsigned int t)$/;"	f
+_BYTE_DEF_	NRF_24L01.H	3;"	d
+__NRF24L01__	UART.H	2;"	d
+_delay_ms	UART.C	/^void _delay_ms(unsigned int _ms)$/;"	f
+_delay_us	UART.C	/^void _delay_us(unsigned int _us)$/;"	f
+com_printf	UART.C	/^void com_printf(unsigned char *pc,unsigned ass)$/;"	f
+delay_ms	NRF_24L01.C	/^void delay_ms(unsigned int _ms)$/;"	f
+flag	NRF_24L01.C	/^uchar flag;$/;"	v
+ifnnrf_CLERN_ALL	NRF_24L01.C	/^void ifnnrf_CLERN_ALL()$/;"	f
+ifnnrf_rx_mode	NRF_24L01.C	/^void ifnnrf_rx_mode(void)$/;"	f
+ifnnrf_tx_mode	NRF_24L01.C	/^void ifnnrf_tx_mode(void)$/;"	f
+init_cpu	UART.C	/^void init_cpu(void)$/;"	f
+init_nrf24l01_io	NRF_24L01.C	/^void init_nrf24l01_io(void)$/;"	f
+led	MAIN.C	/^sbit led=P0^0;$/;"	v
+main	MAIN.C	/^main()$/;"	f
+power_off	NRF_24L01.C	/^void power_off()$/;"	f
+rx_buf	NRF_24L01.C	/^uchar rx_buf[TX_PLOAD_WIDTH];$/;"	v
+rx_buf	NRF_24L01.H	/^  unsigned char rx_buf[];$/;"	v
+st	NRF_24L01.C	/^bdata unsigned char st=0;$/;"	v
+st1	NRF_24L01.C	/^bdata unsigned char st1=0;$/;"	v
+st_1	NRF_24L01.C	/^sbit st_1=st^0;$/;"	v
+st_11	NRF_24L01.C	/^sbit st_11=st1^0;$/;"	v
+st_12	NRF_24L01.C	/^sbit st_12=st1^1;$/;"	v
+st_13	NRF_24L01.C	/^sbit st_13=st1^2;$/;"	v
+st_14	NRF_24L01.C	/^sbit st_14=st1^3;$/;"	v
+st_15	NRF_24L01.C	/^sbit st_15=st1^4;$/;"	v
+st_16	NRF_24L01.C	/^sbit st_16=st1^5;$/;"	v
+st_17	NRF_24L01.C	/^sbit st_17=st1^6;$/;"	v
+st_18	NRF_24L01.C	/^sbit st_18=st1^7;$/;"	v
+st_2	NRF_24L01.C	/^sbit st_2=st^1;$/;"	v
+st_3	NRF_24L01.C	/^sbit st_3=st^2;$/;"	v
+st_4	NRF_24L01.C	/^sbit st_4=st^3;$/;"	v
+st_5	NRF_24L01.C	/^sbit st_5=st^4;$/;"	v
+st_6	NRF_24L01.C	/^sbit st_6=st^5;$/;"	v
+st_7	NRF_24L01.C	/^sbit st_7=st^6;$/;"	v
+st_8	NRF_24L01.C	/^sbit st_8=st^7;$/;"	v
+sta	NRF_24L01.C	/^unsigned char	bdata sta;$/;"	v
+tx_buf	NRF_24L01.C	/^uchar tx_buf[TX_PLOAD_WIDTH];\/\/这个应该是发送数据的缓冲区$/;"	v
+tx_buf	NRF_24L01.H	/^  unsigned char tx_buf[];$/;"	v
+uchar	NRF_24L01.C	11;"	d	file:
+uchar	NRF_24L01.H	/^typedef unsigned char uchar;$/;"	t

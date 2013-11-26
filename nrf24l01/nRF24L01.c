@@ -2,8 +2,6 @@
 
 #define uchar unsigned char
 
-uchar TX_ADDRESS[TX_ADR_WIDTH] = {0X34,0X43,0X10,0X10,0X01};
-
 void init_nrf24l01_io(void)
 {	
 	CLEARBIT(PORTB,CE);
@@ -123,7 +121,7 @@ Description:
   packet and expext an acknowledgment from the RX device.
 **************************************************/
 //切换成发送模式
-void ifnnrf_tx_mode(void)
+void ifnnrf_tx_mode(unsigned char * TX_ADDRESS)
 {
 //切换成关机状态
     power_off();
@@ -149,7 +147,7 @@ void ifnnrf_tx_mode(void)
 	CE_EN;
 }
 
-void ifnnrf_rx_mode(void)
+void ifnnrf_rx_mode(unsigned char * TX_ADDRESS)
 {
 //重新给模块上电并把寄存器全部清零
     power_off();
@@ -197,10 +195,10 @@ void ifnnrf_CLERN_ALL()
 }
 
 //封装好的接收函数,成功返回1，失败返回0
-uchar nrf_rx (void)
+uchar nrf_rx (unsigned char * TX_ADDRESS)
 {
 	uchar rx_sta,bit;
-	ifnnrf_rx_mode ();
+	ifnnrf_rx_mode (TX_ADDRESS);
 	_delay_us (400);
 	rx_sta = SPI_Read (STATUS);
 	SPI_RW_Reg (WRITE_REG+STATUS,0XFF);	
@@ -219,10 +217,10 @@ uchar nrf_rx (void)
 }
 
 //封装好的发送函数，成功返回1，失败返回0
-uchar nrf_tx (void)
+uchar nrf_tx (unsigned char * TX_ADDRESS)
 {
 	uchar tx_sta,bit;
-	ifnnrf_tx_mode ();
+	ifnnrf_tx_mode (TX_ADDRESS);
 	while (PIND & (1<<IRQ));
 	tx_sta = SPI_Read (STATUS);
 	SPI_RW_Reg (WRITE_REG+STATUS,0Xff);

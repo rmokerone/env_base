@@ -1,0 +1,342 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIVATE	exp/nRF24L01.h	120;"	d
+ARC	exp/nRF24L01.h	90;"	d
+ARC_CNT	exp/nRF24L01.h	100;"	d
+ARD	exp/nRF24L01.h	89;"	d
+AVRDUDE	Makefile	/^AVRDUDE = avrdude$/;"	m
+AVRDUDE	exp/Makefile	/^AVRDUDE = avrdude$/;"	m
+AVRDUDE_FLAGS	Makefile	/^AVRDUDE_FLAGS = -c usbasp -F$/;"	m
+AVRDUDE_FLAGS	exp/Makefile	/^AVRDUDE_FLAGS = -c usbasp -F$/;"	m
+AW	exp/nRF24L01.h	88;"	d
+BAUD	uart.h	2;"	d
+BAUD_SETTING	uart.h	6;"	d
+BIT	exp/nRF24L01.h	24;"	d
+BIT	nRF24L01.h	10;"	d
+BYTE	exp+c51/NRF_24L01.H	/^typedef unsigned char BYTE;$/;"	t
+BYTE	nRF24L01.h	27;"	d
+CC	Makefile	/^CC             = avr-gcc$/;"	m
+CC	exp/Makefile	/^CC             = avr-gcc$/;"	m
+CD	exp+c51/NRF_24L01.H	33;"	d
+CD	exp/nRF24L01.h	50;"	d
+CD	nRF24L01.h	54;"	d
+CE	exp+c51/NRF_24L01.H	/^  sbit CE =  P1^0;$/;"	v
+CE	exp/main.c	20;"	d	file:
+CE	exp/nRF24L01.h	31;"	d
+CE	nRF24L01.h	104;"	d
+CE_CLR	nRF24L01.h	22;"	d
+CE_EN	nRF24L01.h	21;"	d
+CLEARBIT	exp/nRF24L01.h	28;"	d
+CLEARBIT	nRF24L01.h	14;"	d
+CLEARBITS	exp/nRF24L01.h	26;"	d
+CLEARBITS	nRF24L01.h	12;"	d
+CONFIG	exp+c51/NRF_24L01.H	24;"	d
+CONFIG	exp/nRF24L01.h	41;"	d
+CONFIG	nRF24L01.h	46;"	d
+CRCO	exp/nRF24L01.h	73;"	d
+CRYSTAL	uart.h	4;"	d
+CSN	exp+c51/NRF_24L01.H	/^  sbit CSN=  P1^4;$/;"	v
+CSN	exp/main.c	21;"	d	file:
+CSN	exp/nRF24L01.h	32;"	d
+CSN	nRF24L01.h	105;"	d
+CSN_CLR	nRF24L01.h	19;"	d
+CSN_EN	nRF24L01.h	17;"	d
+ChangeAddress	exp/main.c	/^void ChangeAddress(uint8_t adress)$/;"	f
+DEFS	Makefile	/^DEFS           =$/;"	m
+DEFS	exp/Makefile	/^DEFS           =$/;"	m
+DFLAGS	Makefile	/^override LDFLAGS       = -Wl,-Map,$(PRG).map$/;"	m
+DFLAGS	exp/Makefile	/^override LDFLAGS       = -Wl,-Map,$(PRG).map$/;"	m
+DPL_P0	exp/nRF24L01.h	111;"	d
+DPL_P1	exp/nRF24L01.h	110;"	d
+DPL_P2	exp/nRF24L01.h	109;"	d
+DPL_P3	exp/nRF24L01.h	108;"	d
+DPL_P4	exp/nRF24L01.h	107;"	d
+DPL_P5	exp/nRF24L01.h	106;"	d
+DYNPD	exp/nRF24L01.h	65;"	d
+ENAA_P0	exp/nRF24L01.h	81;"	d
+ENAA_P1	exp/nRF24L01.h	80;"	d
+ENAA_P2	exp/nRF24L01.h	79;"	d
+ENAA_P3	exp/nRF24L01.h	78;"	d
+ENAA_P4	exp/nRF24L01.h	77;"	d
+ENAA_P5	exp/nRF24L01.h	76;"	d
+EN_AA	exp+c51/NRF_24L01.H	25;"	d
+EN_AA	exp/nRF24L01.h	42;"	d
+EN_AA	nRF24L01.h	47;"	d
+EN_ACK_PAY	exp/nRF24L01.h	113;"	d
+EN_CRC	exp/nRF24L01.h	72;"	d
+EN_DPL	exp/nRF24L01.h	112;"	d
+EN_DYN_ACK	exp/nRF24L01.h	114;"	d
+EN_RXADDR	exp+c51/NRF_24L01.H	26;"	d
+EN_RXADDR	exp/nRF24L01.h	43;"	d
+EN_RXADDR	nRF24L01.h	48;"	d
+ERX_P0	exp/nRF24L01.h	87;"	d
+ERX_P1	exp/nRF24L01.h	86;"	d
+ERX_P2	exp/nRF24L01.h	85;"	d
+ERX_P3	exp/nRF24L01.h	84;"	d
+ERX_P4	exp/nRF24L01.h	83;"	d
+ERX_P5	exp/nRF24L01.h	82;"	d
+EXTRA_CLEAN_FILES	Makefile	/^EXTRA_CLEAN_FILES       = *.hex *.bin *.srec$/;"	m
+EXTRA_CLEAN_FILES	exp/Makefile	/^EXTRA_CLEAN_FILES       = *.hex *.bin *.srec$/;"	m
+FEATURE	exp/nRF24L01.h	66;"	d
+FIFO_FULL	exp/nRF24L01.h	102;"	d
+FIFO_STATUS	exp+c51/NRF_24L01.H	47;"	d
+FIFO_STATUS	exp/nRF24L01.h	64;"	d
+FIFO_STATUS	nRF24L01.h	68;"	d
+FIG2DEV	Makefile	/^FIG2DEV                 = fig2dev$/;"	m
+FIG2DEV	exp/Makefile	/^FIG2DEV                 = fig2dev$/;"	m
+FLAGS	Makefile	/^override CFLAGS        = -g -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) $(DEFS)$/;"	m
+FLAGS	exp/Makefile	/^override CFLAGS        = -g -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) $(DEFS)$/;"	m
+FLUSH_RX	exp+c51/NRF_24L01.H	18;"	d
+FLUSH_RX	exp/nRF24L01.h	126;"	d
+FLUSH_RX	nRF24L01.h	40;"	d
+FLUSH_TX	exp+c51/NRF_24L01.H	17;"	d
+FLUSH_TX	exp/nRF24L01.h	125;"	d
+FLUSH_TX	nRF24L01.h	39;"	d
+F_CPU	exp/main.c	11;"	d	file:
+F_CPU	main.c	3;"	d	file:
+F_CPU	nRF24L01.h	3;"	d
+GetReg	exp/main.c	/^uint8_t GetReg(uint8_t reg)$/;"	f
+INT0_interrupt_init	exp/main.c	/^void INT0_interrupt_init(void)	$/;"	f
+IRQ	exp+c51/NRF_24L01.H	/^  sbit IRQ = P1^1;$/;"	v
+ISR	exp/main.c	/^ISR(INT0_vect)	\/\/vektorn som går igång när transmit_payload lyckats sända eller när receive_payload fått data OBS: då Mask_Max_rt är satt i config registret så går den inte igång när MAX_RT är uppnåd å sändninge nmisslyckats!$/;"	f
+ISR	exp/main.c	/^ISR(USART_RX_vect)	\/\/\/Vector that triggers when computer sends something to the Atmega88$/;"	f
+InitSPI	exp/main.c	/^void InitSPI(void) $/;"	f
+KEY	exp+c51/NRF_24L01.C	45;"	d	file:
+KEY	exp+c51/config.h	/^sbit KEY = P1^2;$/;"	v
+LIBS	Makefile	/^LIBS           =$/;"	m
+LIBS	exp/Makefile	/^LIBS           =$/;"	m
+LNA_HCURR	exp/nRF24L01.h	131;"	d
+MASK_MAX_RT	exp/nRF24L01.h	71;"	d
+MASK_RX_DR	exp/nRF24L01.h	69;"	d
+MASK_TX_DS	exp/nRF24L01.h	70;"	d
+MAX_RT	exp+c51/NRF_24L01.C	/^sbit	MAX_RT	=sta^4;$/;"	v
+MAX_RT	exp/nRF24L01.h	96;"	d
+MCU_TARGET	Makefile	/^MCU_TARGET     = atmega88$/;"	m
+MCU_TARGET	exp/Makefile	/^MCU_TARGET     = atmega328p$/;"	m
+MISO	exp+c51/NRF_24L01.H	/^  sbit MISO= P1^7;$/;"	v
+MISO	exp/main.c	23;"	d	file:
+MISO	exp/nRF24L01.h	34;"	d
+MISO	nRF24L01.h	107;"	d
+MOSI	exp+c51/NRF_24L01.H	/^  sbit MOSI= P1^6;$/;"	v
+MOSI	exp/main.c	22;"	d	file:
+MOSI	exp/nRF24L01.h	33;"	d
+MOSI	nRF24L01.h	106;"	d
+NOP	exp+c51/NRF_24L01.H	20;"	d
+NOP	exp/nRF24L01.h	128;"	d
+NOP	nRF24L01.h	42;"	d
+NRF24L01_SPI_Init	nRF24L01.c	/^void NRF24L01_SPI_Init(void)     \/\/ Init SPI $/;"	f
+OBJ	Makefile	/^OBJ            = main.o uart.o nRF24L01.o$/;"	m
+OBJ	exp/Makefile	/^OBJ            = main.o$/;"	m
+OBJCOPY	Makefile	/^OBJCOPY        = avr-objcopy$/;"	m
+OBJCOPY	exp/Makefile	/^OBJCOPY        = avr-objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP        = avr-objdump$/;"	m
+OBJDUMP	exp/Makefile	/^OBJDUMP        = avr-objdump$/;"	m
+OBSERVE_TX	exp+c51/NRF_24L01.H	32;"	d
+OBSERVE_TX	exp/nRF24L01.h	49;"	d
+OPTIMIZE	Makefile	/^OPTIMIZE       = -O2$/;"	m
+OPTIMIZE	exp/Makefile	/^OPTIMIZE       = -O2$/;"	m
+PLL_LOCK	exp/nRF24L01.h	91;"	d
+PLOS_CNT	exp/nRF24L01.h	99;"	d
+PRG	Makefile	/^PRG            = main$/;"	m
+PRG	exp/Makefile	/^PRG            = main$/;"	m
+PRIM_RX	exp/nRF24L01.h	75;"	d
+PWR_UP	exp/nRF24L01.h	74;"	d
+R	exp/nRF24L01.h	38;"	d
+RD_RX_PLOAD	exp+c51/NRF_24L01.H	15;"	d
+RD_RX_PLOAD	nRF24L01.h	37;"	d
+READ_REG	exp+c51/NRF_24L01.H	13;"	d
+READ_REG	nRF24L01.h	35;"	d
+REGISTER_MASK	exp/nRF24L01.h	119;"	d
+REUSE_TX_PL	exp+c51/NRF_24L01.H	19;"	d
+REUSE_TX_PL	exp/nRF24L01.h	127;"	d
+REUSE_TX_PL	nRF24L01.h	41;"	d
+RF_CH	exp+c51/NRF_24L01.H	29;"	d
+RF_CH	exp/nRF24L01.h	46;"	d
+RF_CH	nRF24L01.h	51;"	d
+RF_DR	exp/nRF24L01.h	92;"	d
+RF_DR_HIGH	exp/nRF24L01.h	138;"	d
+RF_DR_LOW	exp/nRF24L01.h	137;"	d
+RF_PWR	exp/nRF24L01.h	93;"	d
+RF_PWR_HIGH	exp/nRF24L01.h	140;"	d
+RF_PWR_LOW	exp/nRF24L01.h	139;"	d
+RF_SETUP	exp+c51/NRF_24L01.H	30;"	d
+RF_SETUP	exp/nRF24L01.h	47;"	d
+RF_SETUP	nRF24L01.h	52;"	d
+RPD	exp/nRF24L01.h	134;"	d
+RX_ADDR_P0	exp+c51/NRF_24L01.H	34;"	d
+RX_ADDR_P0	exp/nRF24L01.h	51;"	d
+RX_ADDR_P0	nRF24L01.h	55;"	d
+RX_ADDR_P1	exp+c51/NRF_24L01.H	35;"	d
+RX_ADDR_P1	exp/nRF24L01.h	52;"	d
+RX_ADDR_P1	nRF24L01.h	56;"	d
+RX_ADDR_P2	exp+c51/NRF_24L01.H	36;"	d
+RX_ADDR_P2	exp/nRF24L01.h	53;"	d
+RX_ADDR_P2	nRF24L01.h	57;"	d
+RX_ADDR_P3	exp+c51/NRF_24L01.H	37;"	d
+RX_ADDR_P3	exp/nRF24L01.h	54;"	d
+RX_ADDR_P3	nRF24L01.h	58;"	d
+RX_ADDR_P4	exp+c51/NRF_24L01.H	38;"	d
+RX_ADDR_P4	exp/nRF24L01.h	55;"	d
+RX_ADDR_P4	nRF24L01.h	59;"	d
+RX_ADDR_P5	exp+c51/NRF_24L01.H	39;"	d
+RX_ADDR_P5	exp/nRF24L01.h	56;"	d
+RX_ADDR_P5	nRF24L01.h	60;"	d
+RX_DR	exp+c51/NRF_24L01.C	/^sbit	RX_DR	=sta^6;$/;"	v
+RX_DR	exp/nRF24L01.h	94;"	d
+RX_EMPTY	exp/nRF24L01.h	105;"	d
+RX_FULL	exp/nRF24L01.h	104;"	d
+RX_PW_P0	exp+c51/NRF_24L01.H	41;"	d
+RX_PW_P0	exp/nRF24L01.h	58;"	d
+RX_PW_P0	nRF24L01.h	62;"	d
+RX_PW_P1	exp+c51/NRF_24L01.H	42;"	d
+RX_PW_P1	exp/nRF24L01.h	59;"	d
+RX_PW_P1	nRF24L01.h	63;"	d
+RX_PW_P2	exp+c51/NRF_24L01.H	43;"	d
+RX_PW_P2	exp/nRF24L01.h	60;"	d
+RX_PW_P2	nRF24L01.h	64;"	d
+RX_PW_P3	exp+c51/NRF_24L01.H	44;"	d
+RX_PW_P3	exp/nRF24L01.h	61;"	d
+RX_PW_P3	nRF24L01.h	65;"	d
+RX_PW_P4	exp+c51/NRF_24L01.H	45;"	d
+RX_PW_P4	exp/nRF24L01.h	62;"	d
+RX_PW_P4	nRF24L01.h	66;"	d
+RX_PW_P5	exp+c51/NRF_24L01.H	46;"	d
+RX_PW_P5	exp/nRF24L01.h	63;"	d
+RX_PW_P5	nRF24L01.h	67;"	d
+RX_P_NO	exp/nRF24L01.h	97;"	d
+R_REGISTER	exp/nRF24L01.h	117;"	d
+R_RX_PAYLOAD	exp/nRF24L01.h	122;"	d
+R_RX_PL_WID	exp/nRF24L01.h	121;"	d
+SCK	exp+c51/NRF_24L01.H	/^  sbit SCK=  P1^5;$/;"	v
+SCK	exp/main.c	24;"	d	file:
+SCK	exp/nRF24L01.h	35;"	d
+SCK	nRF24L01.h	108;"	d
+SETBIT	exp/nRF24L01.h	27;"	d
+SETBIT	nRF24L01.h	13;"	d
+SETBITS	exp/nRF24L01.h	25;"	d
+SETBITS	nRF24L01.h	11;"	d
+SETUP_AW	exp+c51/NRF_24L01.H	27;"	d
+SETUP_AW	exp/nRF24L01.h	44;"	d
+SETUP_AW	nRF24L01.h	49;"	d
+SETUP_RETR	exp+c51/NRF_24L01.H	28;"	d
+SETUP_RETR	exp/nRF24L01.h	45;"	d
+SETUP_RETR	nRF24L01.h	50;"	d
+SPI_CLR_Reg	exp+c51/NRF_24L01.C	/^void SPI_CLR_Reg(BYTE R_T)$/;"	f
+SPI_RW	exp+c51/NRF_24L01.C	/^uchar SPI_RW(uchar byte)$/;"	f
+SPI_RW	nRF24L01.c	/^uchar SPI_RW(BYTE byte)         \/\/ Single SPI read\/write$/;"	f
+SPI_RW_Reg	exp+c51/NRF_24L01.C	/^uchar SPI_RW_Reg(BYTE reg, BYTE value)$/;"	f
+SPI_RW_Reg	nRF24L01.c	/^uchar SPI_RW_Reg(BYTE reg, BYTE value)   \/\/ Read one byte from nRF24L01$/;"	f
+SPI_Read	exp+c51/NRF_24L01.C	/^BYTE SPI_Read(BYTE reg)$/;"	f
+SPI_Read	nRF24L01.c	/^BYTE SPI_Read(BYTE reg)$/;"	f
+SPI_Read_Buf	exp+c51/NRF_24L01.C	/^uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+SPI_Read_Buf	nRF24L01.c	/^uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+SPI_Write_Buf	exp+c51/NRF_24L01.C	/^uchar SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+SPI_Write_Buf	nRF24L01.c	/^uchar SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes)$/;"	f
+STATUS	exp+c51/NRF_24L01.H	31;"	d
+STATUS	exp/nRF24L01.h	48;"	d
+STATUS	nRF24L01.h	53;"	d
+STA_MARK_MX	exp+c51/NRF_24L01.H	50;"	d
+STA_MARK_MX	nRF24L01.h	71;"	d
+STA_MARK_RX	exp+c51/NRF_24L01.H	48;"	d
+STA_MARK_RX	nRF24L01.h	69;"	d
+STA_MARK_TX	exp+c51/NRF_24L01.H	49;"	d
+STA_MARK_TX	nRF24L01.h	70;"	d
+TX_ADDR	exp+c51/NRF_24L01.H	40;"	d
+TX_ADDR	exp/nRF24L01.h	57;"	d
+TX_ADDR	nRF24L01.h	61;"	d
+TX_ADDRESS	exp+c51/NRF_24L01.C	/^uchar const TX_ADDRESS[TX_ADR_WIDTH]  = {0x34,0x43,0x10,0x10,0x01}; \/\/ Define a static TX address$/;"	v
+TX_ADDRESS	nRF24L01.c	/^uchar TX_ADDRESS[TX_ADR_WIDTH] = {0X34,0X43,0X10,0X10,0X01};$/;"	v
+TX_ADR_WIDTH	exp+c51/NRF_24L01.H	8;"	d
+TX_ADR_WIDTH	nRF24L01.h	30;"	d
+TX_DS	exp+c51/NRF_24L01.C	/^sbit	TX_DS	=sta^5;$/;"	v
+TX_DS	exp/nRF24L01.h	95;"	d
+TX_EMPTY	exp/nRF24L01.h	103;"	d
+TX_FULL	exp/nRF24L01.h	98;"	d
+TX_PLOAD_WIDTH	exp+c51/NRF_24L01.H	10;"	d
+TX_PLOAD_WIDTH	nRF24L01.h	32;"	d
+TX_REUSE	exp/nRF24L01.h	101;"	d
+TxData	exp+c51/UART.C	/^void TxData (unsigned char JK)$/;"	f
+USART_Receive	exp/main.c	/^uint8_t USART_Receive( void )$/;"	f
+USART_Transmit	exp/main.c	/^void USART_Transmit(uint8_t data)$/;"	f
+USART_interrupt_init	exp/main.c	/^void USART_interrupt_init(void)$/;"	f
+W	exp/nRF24L01.h	37;"	d
+WRITE_REG	exp+c51/NRF_24L01.H	14;"	d
+WRITE_REG	nRF24L01.h	36;"	d
+WR_TX_PLOAD	exp+c51/NRF_24L01.H	16;"	d
+WR_TX_PLOAD	nRF24L01.h	38;"	d
+W_ACK_PAYLOAD	exp/nRF24L01.h	124;"	d
+W_REGISTER	exp/nRF24L01.h	118;"	d
+W_TX_PAYLOAD	exp/nRF24L01.h	123;"	d
+Wait	exp+c51/UART.C	/^void Wait(unsigned int t)$/;"	f
+WriteByteSPI	exp/main.c	/^char WriteByteSPI(unsigned char cData)$/;"	f
+WriteToNrf	exp/main.c	/^uint8_t *WriteToNrf(uint8_t ReadWrite, uint8_t reg, uint8_t *val, uint8_t antVal)	\/\/tar in "ReadWrite" (W el R), "reg" (ett register), "*val" (en array) & "antVal" (antal integer i variabeln)$/;"	f
+_BYTE_DEF_	exp+c51/NRF_24L01.H	3;"	d
+_BYTE_DEF_	nRF24L01.h	25;"	d
+__NRF24L01__	exp+c51/UART.H	2;"	d
+_delay_ms	exp+c51/UART.C	/^void _delay_ms(unsigned int _ms)$/;"	f
+_delay_us	exp+c51/UART.C	/^void _delay_us(unsigned int _us)$/;"	f
+arr	exp/main.c	/^uint8_t *arr;$/;"	v
+clockprescale	exp/main.c	/^void clockprescale(void)	$/;"	f
+com_printf	exp+c51/UART.C	/^void com_printf(unsigned char *pc,unsigned ass)$/;"	f
+data	exp/main.c	/^uint8_t *data;$/;"	v
+dataLen	exp/main.c	17;"	d	file:
+delay_ms	exp+c51/NRF_24L01.C	/^void delay_ms(unsigned int _ms)$/;"	f
+flag	exp+c51/NRF_24L01.C	/^uchar flag;$/;"	v
+flag	nRF24L01.h	/^uchar flag;$/;"	v
+ifnnrf_CLERN_ALL	exp+c51/NRF_24L01.C	/^void ifnnrf_CLERN_ALL()$/;"	f
+ifnnrf_rx_mode	exp+c51/NRF_24L01.C	/^void ifnnrf_rx_mode(void)$/;"	f
+ifnnrf_tx_mode	exp+c51/NRF_24L01.C	/^void ifnnrf_tx_mode(void)$/;"	f
+ifnnrf_tx_mode	nRF24L01.c	/^void ifnnrf_tx_mode(void)$/;"	f
+init_cpu	exp+c51/UART.C	/^void init_cpu(void)$/;"	f
+init_nrf24l01_io	exp+c51/NRF_24L01.C	/^void init_nrf24l01_io(void)$/;"	f
+init_nrf24l01_io	nRF24L01.c	/^void init_nrf24l01_io(void)$/;"	f
+init_uart	uart.c	/^void init_uart(unsigned int baud)$/;"	f
+ioinit	exp/main.c	/^void ioinit(void)			$/;"	f
+led	exp+c51/MAIN.C	/^sbit led=P0^0;$/;"	v
+main	exp+c51/MAIN.C	/^main()$/;"	f
+main	exp/main.c	/^int main(void)$/;"	f
+main	main.c	/^int main (void)$/;"	f
+mystdout	main.c	/^static FILE mystdout = FDEV_SETUP_STREAM (uart_putchar, NULL, _FDEV_SETUP_WRITE);$/;"	v	file:
+nrf24L01_init	exp/main.c	/^void nrf24L01_init(void)$/;"	f
+power_off	exp+c51/NRF_24L01.C	/^void power_off()$/;"	f
+power_off	nRF24L01.c	/^void power_off()$/;"	f
+receive_payload	exp/main.c	/^void receive_payload(void)$/;"	f
+reset	exp/main.c	/^void reset(void)$/;"	f
+rx_buf	exp+c51/NRF_24L01.C	/^uchar rx_buf[TX_PLOAD_WIDTH];$/;"	v
+rx_buf	exp+c51/NRF_24L01.H	/^  unsigned char rx_buf[];$/;"	v
+rx_buf	nRF24L01.h	/^uchar rx_buf[TX_PLOAD_WIDTH];$/;"	v
+st	exp+c51/NRF_24L01.C	/^bdata unsigned char st=0;$/;"	v
+st1	exp+c51/NRF_24L01.C	/^bdata unsigned char st1=0;$/;"	v
+st_1	exp+c51/NRF_24L01.C	/^sbit st_1=st^0;$/;"	v
+st_11	exp+c51/NRF_24L01.C	/^sbit st_11=st1^0;$/;"	v
+st_12	exp+c51/NRF_24L01.C	/^sbit st_12=st1^1;$/;"	v
+st_13	exp+c51/NRF_24L01.C	/^sbit st_13=st1^2;$/;"	v
+st_14	exp+c51/NRF_24L01.C	/^sbit st_14=st1^3;$/;"	v
+st_15	exp+c51/NRF_24L01.C	/^sbit st_15=st1^4;$/;"	v
+st_16	exp+c51/NRF_24L01.C	/^sbit st_16=st1^5;$/;"	v
+st_17	exp+c51/NRF_24L01.C	/^sbit st_17=st1^6;$/;"	v
+st_18	exp+c51/NRF_24L01.C	/^sbit st_18=st1^7;$/;"	v
+st_2	exp+c51/NRF_24L01.C	/^sbit st_2=st^1;$/;"	v
+st_3	exp+c51/NRF_24L01.C	/^sbit st_3=st^2;$/;"	v
+st_4	exp+c51/NRF_24L01.C	/^sbit st_4=st^3;$/;"	v
+st_5	exp+c51/NRF_24L01.C	/^sbit st_5=st^4;$/;"	v
+st_6	exp+c51/NRF_24L01.C	/^sbit st_6=st^5;$/;"	v
+st_7	exp+c51/NRF_24L01.C	/^sbit st_7=st^6;$/;"	v
+st_8	exp+c51/NRF_24L01.C	/^sbit st_8=st^7;$/;"	v
+sta	exp+c51/NRF_24L01.C	/^unsigned char	bdata sta;$/;"	v
+transmit_payload	exp/main.c	/^void transmit_payload(uint8_t * W_buff)$/;"	f
+tx_buf	exp+c51/NRF_24L01.C	/^uchar tx_buf[TX_PLOAD_WIDTH];\/\/这个应该是发送数据的缓冲区$/;"	v
+tx_buf	exp+c51/NRF_24L01.H	/^  unsigned char tx_buf[];$/;"	v
+tx_buf	nRF24L01.h	/^uchar tx_buf[TX_PLOAD_WIDTH];\/\/这个应该是发送数据的缓冲区$/;"	v
+uart_data	uart.h	/^volatile unsigned char uart_data;$/;"	v
+uart_putchar	uart.c	/^int uart_putchar (char c, FILE * stream)$/;"	f
+uchar	exp+c51/NRF_24L01.C	11;"	d	file:
+uchar	exp+c51/NRF_24L01.H	/^typedef unsigned char uchar;$/;"	t
+uchar	nRF24L01.c	3;"	d	file:
+uchar	nRF24L01.h	28;"	d
+uchar	nRF24L01.h	7;"	d
+usart_init	exp/main.c	/^void usart_init(void)$/;"	f

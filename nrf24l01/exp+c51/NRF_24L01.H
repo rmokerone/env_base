@@ -1,34 +1,9 @@
-//nrf24l01.h
-
-#define F_CPU 8E6
-#include <avr/io.h>
-#include <util/delay.h>
-
-#define uchar unsigned char
-
-#define RX 1
-#define TX 0
-
-//快捷方式设置寄存器
-#define BIT(x) (1 << (x))
-#define SETBITS(x,y) ((x) |= (y))
-#define CLEARBITS(x,y) ((x) &= (~(y)))
-#define SETBIT(x,y) SETBITS((x),(BIT((y))))
-#define CLEARBIT(x,y) CLEARBITS((x),(BIT((y))))
-
-//置位CSN
-#define CSN_EN SETBIT(PORTB,CSN)
-//清零CSN
-#define CSN_CLR CLEARBIT(PORTB,CSN)
-
-#define CE_EN SETBIT(PORTB,CE)
-#define CE_CLR SETBIT(PORTB,CE)
 
 #ifndef _BYTE_DEF_
 #define _BYTE_DEF_
 
-#define BYTE unsigned char 
-#define uchar unsigned char 
+typedef unsigned char BYTE;
+typedef unsigned char uchar;
 
 #define TX_ADR_WIDTH    5   // 5  bytes TX(RX) address width
 
@@ -53,7 +28,8 @@
 #define SETUP_RETR      0x04  // 'Setup Auto. Retrans' register address
 #define RF_CH           0x05  // 'RF channel' register address
 #define RF_SETUP        0x06  // 'RF setup' register address
-#define STATUS          0x07  // 'Status' register address #define OBSERVE_TX      0x08  // 'Observe TX' register address
+#define STATUS          0x07  // 'Status' register address
+#define OBSERVE_TX      0x08  // 'Observe TX' register address
 #define CD              0x09  // 'Carrier Detect' register address
 #define RX_ADDR_P0      0x0A  // 'RX address pipe0' register address
 #define RX_ADDR_P1      0x0B  // 'RX address pipe1' register address
@@ -71,11 +47,7 @@
 #define FIFO_STATUS     0x17  // 'FIFO Status Register' register address
 #define STA_MARK_RX     0X40
 #define STA_MARK_TX     0X20
-#define STA_MARK_MX     0X10	 
-//定义接收缓冲区和发送数据缓冲区，要收发数据时可直接重缓冲区中读取   
-uchar rx_buf[TX_PLOAD_WIDTH];
-uchar tx_buf[TX_PLOAD_WIDTH];//这个应该是发送数据的缓冲区
-uchar flag;
+#define STA_MARK_MX     0X10	    
 
 
 //***************************************************************//
@@ -87,31 +59,41 @@ uchar flag;
  BYTE SPI_RW_Reg(BYTE reg, BYTE byte);                  // Write one byte to register 'reg'
  BYTE SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);  // Writes multiply bytes to one register
  BYTE SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);   // Read multiply bytes from one register
-*****************************************************************/
-//void NRF24L01_SPI_Init(BYTE Mode);     // Init HW or SW SPI
-
-void SPI_Init();  // init spi
+//*****************************************************************/
+  void NRF24L01_SPI_Init(BYTE Mode);     // Init HW or SW SPI
   uchar SPI_RW(BYTE byte);                                // Single SPI read/write
   uchar SPI_Read(BYTE reg);                               // Read one byte from nRF24L01
   uchar SPI_RW_Reg(BYTE reg, BYTE byte);                  // Write one byte to register 'reg'
   uchar SPI_Write_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);  // Writes multiply bytes to one register
   uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);   // Read multiply bytes from one register
-void power_off (void); 
-void init_nrf24l01_io(void);
-void ifnnrf_rx_mode(unsigned char * TX_ADDRESS);
-void ifnnrf_tx_mode(unsigned char * TX_ADDRESS);
-void ifnnrf_CLERN_ALL();
-//封装好的发送函数
-uchar nrf_tx (unsigned char * TX_ADDRESS);
-//封装好的接收函数
-uchar nrf_rx (unsigned char * TX_ADDRESS);
+
+  void init_nrf24l01_io(void);
+  void ifnnrf_rx_mode(void);
+  void ifnnrf_tx_mode(void);
+  void ifnnrf_CLERN_ALL();
+
+  unsigned char tx_buf[];
+  unsigned char rx_buf[];
+
+  extern unsigned char	bdata sta;
+  /*
+  sbit IRQ = P3^2;
+  sbit CE =  P1^0;
+  sbit CSN=  P1^1;
+  sbit SCK=  P4^0;
+  sbit MOSI= P4^1;
+  sbit MISO= P4^2;
+  */
+
+  sbit IRQ = P1^1;
+
+  sbit CE =  P1^0;
+
+  sbit CSN=  P1^4;
+  sbit SCK=  P1^5;
+  sbit MOSI= P1^6;
+  sbit MISO= P1^7;
 
 
-//定义各个引脚的端口号
-#define CE      PB1
-#define CSN     PB2
-#define MOSI    PB3
-#define MISO    PB4
-#define SCK     PB5
-#define IRQ 	PD2
-#endif 
+
+#endif
