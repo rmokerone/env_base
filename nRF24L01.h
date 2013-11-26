@@ -95,13 +95,13 @@ void SPI_Init();  // init spi
   uchar SPI_Read_Buf(BYTE reg, BYTE *pBuf, BYTE bytes);   // Read multiply bytes from one register
 void power_off (void); 
 void init_nrf24l01_io(void);
-void ifnnrf_rx_mode(void);
-void ifnnrf_tx_mode(void);
+void ifnnrf_rx_mode(unsigned char * TX_ADDRESS);
+void ifnnrf_tx_mode(unsigned char * TX_ADDRESS);
 void ifnnrf_CLERN_ALL();
 //封装好的发送函数
-uchar nrf_tx (void);
+uchar nrf_tx (unsigned char * TX_ADDRESS);
 //封装好的接收函数
-uchar nrf_rx (void);
+uchar nrf_rx (unsigned char * TX_ADDRESS);
 
 
 //定义各个引脚的端口号
