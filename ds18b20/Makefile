@@ -1,5 +1,5 @@
 PRG            = main
-OBJ            = main.o ds18b20.o
+OBJ            = main.o Ds18b20.o
 #MCU_TARGET     = at90s2313
 #MCU_TARGET     = at90s2333
 #MCU_TARGET     = at90s4414

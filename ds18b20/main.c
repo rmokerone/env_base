@@ -2,7 +2,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
-#include "ds18b20.h"
+#include "Ds18b20.h"
 
 int main (void)
 {
